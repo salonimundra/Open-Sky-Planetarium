@@ -1,0 +1,44 @@
+.TH "OpenSkyPlanetariumPluginInterface" 3 "Mon Jan 30 2017" "OpenSky Planetarium" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OpenSkyPlanetariumPluginInterface \- 
+.PP
+This class is used by Qt to manage a plug-in interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OpenSkyPlanetarium\&.hpp>\fP
+.PP
+Inherits QObject, and StelPluginInterface\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual StelModule * \fBgetStelModule\fP () const "
+.br
+.ti -1c
+.RI "virtual StelPluginInfo \fBgetPluginInfo\fP () const "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used by Qt to manage a plug-in interface\&. 
+.PP
+Definition at line 79 of file OpenSkyPlanetarium\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "StelPluginInfo OpenSkyPlanetariumPluginInterface::getPluginInfo () const\fC [virtual]\fP"
+This method is used to pass the information about the OpenSky Planetarium plugin\&. 
+.PP
+Definition at line 43 of file OpenSkyPlanetarium\&.cpp\&.
+.SS "StelModule * OpenSkyPlanetariumPluginInterface::getStelModule () const\fC [virtual]\fP"
+This method is the one called automatically by the StelModuleMgr just after loading the dynamic library 
+.PP
+Definition at line 38 of file OpenSkyPlanetarium\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenSky Planetarium from the source code\&.

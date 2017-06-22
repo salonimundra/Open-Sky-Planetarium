@@ -1,0 +1,383 @@
+.TH "OSPMainDialog" 3 "Mon Jan 30 2017" "OpenSky Planetarium" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OSPMainDialog \- 
+.PP
+This is the main class used in connecting all the signals to gui\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <OSPMainDialog\&.hpp>\fP
+.PP
+Inherits StelDialog\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBretranslate\fP ()"
+.br
+.ti -1c
+.RI "void \fBdebug_received\fP (QString s)"
+.br
+.ti -1c
+.RI "void \fBpos_received\fP (QString x, QString y)"
+.br
+.ti -1c
+.RI "void \fBselectDevice\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitDevice\fP ()"
+.br
+.ti -1c
+.RI "void \fBarrow_released\fP ()"
+.br
+.ti -1c
+.RI "void \fBupPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBdownPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBrightPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBleftPressed\fP ()"
+.br
+.ti -1c
+.RI "void \fBlaserToggled\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetReference\fP ()"
+.br
+.ti -1c
+.RI "void \fBgoTo\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenScript\fP ()"
+.br
+.ti -1c
+.RI "void \fBsaveScript\fP ()"
+.br
+.ti -1c
+.RI "void \fBexecScript\fP ()"
+.br
+.ti -1c
+.RI "void \fBcompileScript\fP ()"
+.br
+.ti -1c
+.RI "void \fBlaser\fP (bool stat)"
+.br
+.ti -1c
+.RI "void \fBplayAudio\fP (QString fname)"
+.br
+.ti -1c
+.RI "void \fBwaitforsec\fP (int min, int sec)"
+.br
+.ti -1c
+.RI "void \fBmove\fP (QString, QString)"
+.br
+.ti -1c
+.RI "void \fBgt\fP ()"
+.br
+.ti -1c
+.RI "void \fBpl\fP ()"
+.br
+.ti -1c
+.RI "void \fBlo\fP ()"
+.br
+.ti -1c
+.RI "void \fBwt\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVolume\fP (int volume)"
+.br
+.ti -1c
+.RI "void \fBplayClicked\fP ()"
+.br
+.ti -1c
+.RI "void \fBstopClick\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBcomGOTO\fP (QString sra, QString sdec)"
+.br
+.ti -1c
+.RI "void \fBcomTURN\fP (bool stat)"
+.br
+.ti -1c
+.RI "void \fBcomWAIT\fP (int min, int sec)"
+.br
+.ti -1c
+.RI "void \fBcomPLAY\fP (QString fname)"
+.br
+.ti -1c
+.RI "void \fBplay\fP ()"
+.br
+.ti -1c
+.RI "void \fBpause\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOSPMainDialog\fP ()"
+.br
+.ti -1c
+.RI "\fB~OSPMainDialog\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetSignals\fP ()"
+.br
+.ti -1c
+.RI "void \fBshowMessage\fP (QString m)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcreateDialogContent\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main class used in connecting all the signals to gui\&. 
+.PP
+Definition at line 39 of file OSPMainDialog\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "OSPMainDialog::OSPMainDialog ()"
+
+.PP
+Definition at line 50 of file OSPMainDialog\&.cpp\&.
+.SS "OSPMainDialog::~OSPMainDialog ()"
+
+.PP
+Definition at line 78 of file OSPMainDialog\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void OSPMainDialog::arrow_released ()\fC [slot]\fP"
+This function is called when the Up(mvUp), Down(mvDown), Right(mvRight) and Left(mvLeft) button is released This function sends the stop command to the arduino device to stop its movement along any of the four directions 
+.PP
+Definition at line 273 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::comGOTO (QStringsra, QStringsdec)\fC [signal]\fP"
+This signal is connected to move of \fBOSPMainDialog\fP class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsra\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates)\&. 
+.RE
+.PP
+
+.SS "void OSPMainDialog::compileScript ()\fC [slot]\fP"
+This function is used to compile script\&. This function maps the user script commands to the C++ functions 
+.PP
+Definition at line 447 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::comPLAY (QStringfname)\fC [signal]\fP"
+This signal is connected to playAudio of \fBOSPMainDialog\fP class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfname\fP file name 
+.RE
+.PP
+
+.SS "void OSPMainDialog::comTURN (boolstat)\fC [signal]\fP"
+This signal is connected to laser of \fBOSPMainDialog\fP class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstat\fP status of laser 
+.RE
+.PP
+
+.SS "void OSPMainDialog::comWAIT (intmin, intsec)\fC [signal]\fP"
+This signal is connected to waitforsec of \fBOSPMainDialog\fP class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImin\fP time in minute 
+.br
+\fIsec\fP time in second 
+.RE
+.PP
+
+.SS "void OSPMainDialog::createDialogContent ()\fC [protected]\fP"
+This function is used to create a dialog box and set the current index of the box 
+.PP
+Definition at line 92 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::debug_received (QStrings)\fC [slot]\fP"
+This funtion is connected to many signals for debugging purpose\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Debug string 
+.RE
+.PP
+
+.PP
+Definition at line 173 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::downPressed ()\fC [slot]\fP"
+This functions is called when the buttons Down(mvDown) is pressed 
+.PP
+Definition at line 286 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::execScript ()\fC [slot]\fP"
+This function is used to execute script\&. This function calls compile function before executing 
+.PP
+Definition at line 414 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::goTo ()\fC [slot]\fP"
+This function sends the coordinates from stellarium to device so that the laser could point the star\&. This function is enabled only after calibration is performed 
+.PP
+Definition at line 348 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::gt ()\fC [slot]\fP"
+This slot is connected to Goto Button of the Script Engine\&. Adds the goto command to your script 
+.PP
+Definition at line 605 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::initDevice ()\fC [slot]\fP"
+This function initiates the arduino device i-e: Counts the no\&. of steps and sets device's postion\&. This function is connected to 'Start Calibration' (startCal) button of the gui 
+.PP
+Definition at line 222 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::laser (boolstat)\fC [slot]\fP"
+This is a slot for our script engine emit signal comTURN\&. This is used when playing the script 
+.PP
+Definition at line 553 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::laserToggled ()\fC [slot]\fP"
+This function is connected to the laser turnOn/turnOff radioButtons of the gui 
+.PP
+Definition at line 303 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::leftPressed ()\fC [slot]\fP"
+This functions is called when the buttons Left(mvLeft) is pressed 
+.PP
+Definition at line 294 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::lo ()\fC [slot]\fP"
+This slot is connected to laser on/off button of the Script Engine\&. Adds the laser on/off command to your script 
+.PP
+Definition at line 640 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::move (QStringx, QStringy)\fC [slot]\fP"
+This is slot connected to goto command from our script engine\&. It takes ra/dec of star as its parameters and converts them to move 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsra\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 537 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::openScript ()\fC [slot]\fP"
+This function opens an existing file if present in the script directory of our module\&. 
+.PP
+Definition at line 375 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::pause ()\fC [signal]\fP"
+This signal is connected to pause of QMediaPlayer class 
+.SS "void OSPMainDialog::pl ()\fC [slot]\fP"
+This slot is connected to Play Button of the Script Engine\&. Adds the play audio command to your script 
+.PP
+Definition at line 624 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::play ()\fC [signal]\fP"
+This signal is connected to play of QMediaPlayer class 
+.SS "void OSPMainDialog::playAudio (QStringfname)\fC [slot]\fP"
+This function is used to play audio files\&. This is used to give play Audio functionality in our script 
+.PP
+Definition at line 587 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::playClicked ()\fC [slot]\fP"
+This slot is connected to play and pause button\&. 
+.PP
+Definition at line 702 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::pos_received (QStringx, QStringy)\fC [slot]\fP"
+This slot is called when the laser device sends us the coordinates The coordinates are then used for setting the references in transformation matrix 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP Azimuth in string\&. 
+.br
+\fIy\fP Altitude in string\&. 
+.RE
+.PP
+
+.PP
+Definition at line 182 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::retranslate ()\fC [slot]\fP"
+This function retranslate the language of plugin\&. 
+.PP
+Definition at line 83 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::rightPressed ()\fC [slot]\fP"
+This functions is called when the buttons Right(mvRight) is pressed 
+.PP
+Definition at line 290 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::saveScript ()\fC [slot]\fP"
+This function is used to save the script 
+.PP
+Definition at line 393 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::selectDevice ()\fC [slot]\fP"
+This slot is connected to the selectDev button of the gui\&. This slot shows a list of connected device to select from after selection enables many buttons\&. 
+.PP
+Definition at line 241 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::setReference ()\fC [slot]\fP"
+This function sets three references for the matrix transformation basically it sends three references for matrix transformation to the device for its calculations 
+.PP
+Definition at line 321 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::setSignals ()"
+This function connects the various gui signals to its corresponding slots\&. This function is called in the \fBcreateDialogContent()\fP function of this class\&. 
+.PP
+Definition at line 106 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::setVolume (intvolume)\fC [slot]\fP"
+This slot is connected to volume slider\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvolume\fP by slider 
+.RE
+.PP
+
+.PP
+Definition at line 678 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::showMessage (QStringm)"
+This function is called to display error/information messages 
+.PP
+Definition at line 208 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::stop ()\fC [signal]\fP"
+This signal is connected to stop of QMediaPlayer class 
+.SS "void OSPMainDialog::stopClick ()\fC [slot]\fP"
+This slot is connected to stop button\&. 
+.PP
+Definition at line 689 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::upPressed ()\fC [slot]\fP"
+This functions is called when the buttons Up(mvUp) is pressed 
+.PP
+Definition at line 282 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::waitforsec (intmin, intsec)\fC [slot]\fP"
+This is used when playing the script\&. This is used to give wait functionality in the script 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImin\fP time in minute 
+.br
+\fIsec\fP time in second 
+.RE
+.PP
+
+.PP
+Definition at line 571 of file OSPMainDialog\&.cpp\&.
+.SS "void OSPMainDialog::wt ()\fC [slot]\fP"
+This slot is connected to wait button of the Script Engine\&. Adds the wait command to your script 
+.PP
+Definition at line 658 of file OSPMainDialog\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenSky Planetarium from the source code\&.

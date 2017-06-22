@@ -1,0 +1,601 @@
+\hypertarget{class_o_s_p_main_dialog}{\section{O\-S\-P\-Main\-Dialog Class Reference}
+\label{class_o_s_p_main_dialog}\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}}
+}
+
+
+This is the main class used in connecting all the signals to gui.  
+
+
+
+
+{\ttfamily \#include $<$O\-S\-P\-Main\-Dialog.\-hpp$>$}
+
+Inheritance diagram for O\-S\-P\-Main\-Dialog\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_s_p_main_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a47ea6fd9f98519cc31e72f5de34a9306}{retranslate} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a3e1eb9ec4e4b720c5710b6dd919cff2a}{debug\-\_\-received} (Q\-String s)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_af8d49ae6630b09271fe3f3eecf083e75}{pos\-\_\-received} (Q\-String x, Q\-String y)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a4ef91ba4a5c2de748ae3863108f64ed1}{select\-Device} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_ab70551cf5084beb1a448070784224b5e}{init\-Device} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a8d977df774af144d6b587874dc72bb6d}{arrow\-\_\-released} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a1d029fbbacb738ec5f96387afc4a148c}{up\-Pressed} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a2d9c9e8eadf0566c6a62b56c256d3036}{down\-Pressed} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_add7447fb9aa1e92241e9dafb24be9eee}{right\-Pressed} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a53254f5a2f14008f0b28e599055db78c}{left\-Pressed} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a50277876272e2b18f4feaed7147805cb}{laser\-Toggled} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a440099805a95258b244578f44797b2fb}{set\-Reference} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a7f89737ac4e508e1149950f5ca3f62f7}{go\-To} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a81e34e4b686fc8a240b8b60fce8db716}{open\-Script} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a3a2279d534043892ce314ebd3676a946}{save\-Script} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a82deaf58658ee7df200d4c3ead6dc238}{exec\-Script} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a147004f47bd6872358d2a1503394df43}{compile\-Script} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a0dc634b74f2f1e2a0fcf3e948e46b761}{laser} (bool stat)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_ad3fec79d0def25964f5adab237abf682}{play\-Audio} (Q\-String fname)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_ad59f47b89d0a2d70d6ec56829069641d}{waitforsec} (int min, int sec)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a926b0132bfacc026a35847ec0c1f8b0a}{move} (Q\-String, Q\-String)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_aab37bcc54ff79d3bf3a1442b3fa27072}{gt} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a30be772a3ccc49a2e06ce3417f2f2d5c}{pl} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_accc6706706a6606f941b913cd9e6bdb6}{lo} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a8f6b102204eb71c786ddc3d05e80601e}{wt} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_ab8473d80b4c5220361b55d310c033858}{set\-Volume} (int volume)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a2427cbbbec577cd4df51f5a993a74bf8}{play\-Clicked} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a5781ec6f0fa33cea8174fcaf335664af}{stop\-Click} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a35e47dd2960e4a5b1ca07ce11a806432}{com\-G\-O\-T\-O} (Q\-String sra, Q\-String sdec)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a5b5dea4eef55d376856d4cfd7eba92f3}{com\-T\-U\-R\-N} (bool stat)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a761b06593a36f1830a009ca4f644c859}{com\-W\-A\-I\-T} (int min, int sec)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a022dc536831ad2fa62b3935ff64d977e}{com\-P\-L\-A\-Y} (Q\-String fname)
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a42763b78bcbcb452a8c8054de364f6fc}{play} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_aa1e618f2fe9cb6253b9a783faf34f6c7}{pause} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a53f55236a4ab1d0569fc8b2be4a3753e}{stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_o_s_p_main_dialog_a10db9ace40cfdd733c99d1fa9564bd2a}{O\-S\-P\-Main\-Dialog} ()
+\item 
+\hyperlink{class_o_s_p_main_dialog_a56031e057b554531243afdeeee57a811}{$\sim$\-O\-S\-P\-Main\-Dialog} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a9ed0230ee9b9aca9d377cbe489b8cc05}{set\-Signals} ()
+\item 
+void \hyperlink{class_o_s_p_main_dialog_ace2c5f32c8ec0512f8bcb972f5350e5f}{show\-Message} (Q\-String m)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_o_s_p_main_dialog_a57985a48791e4fbfd747a7d7e14ec4ca}{create\-Dialog\-Content} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the main class used in connecting all the signals to gui. 
+
+Definition at line 39 of file O\-S\-P\-Main\-Dialog.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_o_s_p_main_dialog_a10db9ace40cfdd733c99d1fa9564bd2a}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}}
+\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{O\-S\-P\-Main\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}O\-S\-P\-Main\-Dialog\-::\-O\-S\-P\-Main\-Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_o_s_p_main_dialog_a10db9ace40cfdd733c99d1fa9564bd2a}
+
+
+Definition at line 50 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a56031e057b554531243afdeeee57a811}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!$\sim$\-O\-S\-P\-Main\-Dialog@{$\sim$\-O\-S\-P\-Main\-Dialog}}
+\index{$\sim$\-O\-S\-P\-Main\-Dialog@{$\sim$\-O\-S\-P\-Main\-Dialog}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{$\sim$\-O\-S\-P\-Main\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}O\-S\-P\-Main\-Dialog\-::$\sim$\-O\-S\-P\-Main\-Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_o_s_p_main_dialog_a56031e057b554531243afdeeee57a811}
+
+
+Definition at line 78 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_o_s_p_main_dialog_a8d977df774af144d6b587874dc72bb6d}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!arrow\-\_\-released@{arrow\-\_\-released}}
+\index{arrow\-\_\-released@{arrow\-\_\-released}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{arrow\-\_\-released}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::arrow\-\_\-released (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a8d977df774af144d6b587874dc72bb6d}
+This function is called when the Up(mv\-Up), Down(mv\-Down), Right(mv\-Right) and Left(mv\-Left) button is released This function sends the stop command to the arduino device to stop its movement along any of the four directions 
+
+Definition at line 273 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a35e47dd2960e4a5b1ca07ce11a806432}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!com\-G\-O\-T\-O@{com\-G\-O\-T\-O}}
+\index{com\-G\-O\-T\-O@{com\-G\-O\-T\-O}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{com\-G\-O\-T\-O}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::com\-G\-O\-T\-O (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{sra, }
+\item[{Q\-String}]{sdec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a35e47dd2960e4a5b1ca07ce11a806432}
+This signal is connected to move of \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} class 
+\begin{DoxyParams}{Parameters}
+{\em sra} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_s_p_main_dialog_a147004f47bd6872358d2a1503394df43}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!compile\-Script@{compile\-Script}}
+\index{compile\-Script@{compile\-Script}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{compile\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::compile\-Script (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a147004f47bd6872358d2a1503394df43}
+This function is used to compile script. This function maps the user script commands to the C++ functions 
+
+Definition at line 447 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a022dc536831ad2fa62b3935ff64d977e}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!com\-P\-L\-A\-Y@{com\-P\-L\-A\-Y}}
+\index{com\-P\-L\-A\-Y@{com\-P\-L\-A\-Y}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{com\-P\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::com\-P\-L\-A\-Y (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{fname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a022dc536831ad2fa62b3935ff64d977e}
+This signal is connected to play\-Audio of \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} class 
+\begin{DoxyParams}{Parameters}
+{\em fname} & file name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_s_p_main_dialog_a5b5dea4eef55d376856d4cfd7eba92f3}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!com\-T\-U\-R\-N@{com\-T\-U\-R\-N}}
+\index{com\-T\-U\-R\-N@{com\-T\-U\-R\-N}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{com\-T\-U\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::com\-T\-U\-R\-N (
+\begin{DoxyParamCaption}
+\item[{bool}]{stat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a5b5dea4eef55d376856d4cfd7eba92f3}
+This signal is connected to laser of \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} class 
+\begin{DoxyParams}{Parameters}
+{\em stat} & status of laser \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_s_p_main_dialog_a761b06593a36f1830a009ca4f644c859}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!com\-W\-A\-I\-T@{com\-W\-A\-I\-T}}
+\index{com\-W\-A\-I\-T@{com\-W\-A\-I\-T}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{com\-W\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::com\-W\-A\-I\-T (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{sec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a761b06593a36f1830a009ca4f644c859}
+This signal is connected to waitforsec of \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} class 
+\begin{DoxyParams}{Parameters}
+{\em min} & time in minute \\
+\hline
+{\em sec} & time in second \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_s_p_main_dialog_a57985a48791e4fbfd747a7d7e14ec4ca}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!create\-Dialog\-Content@{create\-Dialog\-Content}}
+\index{create\-Dialog\-Content@{create\-Dialog\-Content}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{create\-Dialog\-Content}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::create\-Dialog\-Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_o_s_p_main_dialog_a57985a48791e4fbfd747a7d7e14ec4ca}
+This function is used to create a dialog box and set the current index of the box 
+
+Definition at line 92 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a3e1eb9ec4e4b720c5710b6dd919cff2a}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!debug\-\_\-received@{debug\-\_\-received}}
+\index{debug\-\_\-received@{debug\-\_\-received}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{debug\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::debug\-\_\-received (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a3e1eb9ec4e4b720c5710b6dd919cff2a}
+This funtion is connected to many signals for debugging purpose. 
+\begin{DoxyParams}{Parameters}
+{\em s} & Debug string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 173 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a2d9c9e8eadf0566c6a62b56c256d3036}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!down\-Pressed@{down\-Pressed}}
+\index{down\-Pressed@{down\-Pressed}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{down\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::down\-Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a2d9c9e8eadf0566c6a62b56c256d3036}
+This functions is called when the buttons Down(mv\-Down) is pressed 
+
+Definition at line 286 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a82deaf58658ee7df200d4c3ead6dc238}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!exec\-Script@{exec\-Script}}
+\index{exec\-Script@{exec\-Script}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{exec\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::exec\-Script (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a82deaf58658ee7df200d4c3ead6dc238}
+This function is used to execute script. This function calls compile function before executing 
+
+Definition at line 414 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a7f89737ac4e508e1149950f5ca3f62f7}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!go\-To@{go\-To}}
+\index{go\-To@{go\-To}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::go\-To (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a7f89737ac4e508e1149950f5ca3f62f7}
+This function sends the coordinates from stellarium to device so that the laser could point the star. This function is enabled only after calibration is performed 
+
+Definition at line 348 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_aab37bcc54ff79d3bf3a1442b3fa27072}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!gt@{gt}}
+\index{gt@{gt}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{gt}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::gt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_aab37bcc54ff79d3bf3a1442b3fa27072}
+This slot is connected to Goto Button of the Script Engine. Adds the goto command to your script 
+
+Definition at line 605 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_ab70551cf5084beb1a448070784224b5e}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!init\-Device@{init\-Device}}
+\index{init\-Device@{init\-Device}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{init\-Device}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::init\-Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_ab70551cf5084beb1a448070784224b5e}
+This function initiates the arduino device i-\/e\-: Counts the no. of steps and sets device's postion. This function is connected to \char`\"{}\-Start Calibration\char`\"{} (start\-Cal) button of the gui 
+
+Definition at line 222 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a0dc634b74f2f1e2a0fcf3e948e46b761}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!laser@{laser}}
+\index{laser@{laser}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{laser}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::laser (
+\begin{DoxyParamCaption}
+\item[{bool}]{stat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a0dc634b74f2f1e2a0fcf3e948e46b761}
+This is a slot for our script engine emit signal com\-T\-U\-R\-N. This is used when playing the script 
+
+Definition at line 553 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a50277876272e2b18f4feaed7147805cb}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!laser\-Toggled@{laser\-Toggled}}
+\index{laser\-Toggled@{laser\-Toggled}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{laser\-Toggled}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::laser\-Toggled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a50277876272e2b18f4feaed7147805cb}
+This function is connected to the laser turn\-On/turn\-Off radio\-Buttons of the gui 
+
+Definition at line 303 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a53254f5a2f14008f0b28e599055db78c}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!left\-Pressed@{left\-Pressed}}
+\index{left\-Pressed@{left\-Pressed}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{left\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::left\-Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a53254f5a2f14008f0b28e599055db78c}
+This functions is called when the buttons Left(mv\-Left) is pressed 
+
+Definition at line 294 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_accc6706706a6606f941b913cd9e6bdb6}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!lo@{lo}}
+\index{lo@{lo}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{lo}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::lo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_accc6706706a6606f941b913cd9e6bdb6}
+This slot is connected to laser on/off button of the Script Engine. Adds the laser on/off command to your script 
+
+Definition at line 640 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a926b0132bfacc026a35847ec0c1f8b0a}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!move@{move}}
+\index{move@{move}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::move (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{x, }
+\item[{Q\-String}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a926b0132bfacc026a35847ec0c1f8b0a}
+This is slot connected to goto command from our script engine. It takes ra/dec of star as its parameters and converts them to move 
+\begin{DoxyParams}{Parameters}
+{\em sra} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 537 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a81e34e4b686fc8a240b8b60fce8db716}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!open\-Script@{open\-Script}}
+\index{open\-Script@{open\-Script}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{open\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::open\-Script (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a81e34e4b686fc8a240b8b60fce8db716}
+This function opens an existing file if present in the script directory of our module. 
+
+Definition at line 375 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_aa1e618f2fe9cb6253b9a783faf34f6c7}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!pause@{pause}}
+\index{pause@{pause}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_aa1e618f2fe9cb6253b9a783faf34f6c7}
+This signal is connected to pause of Q\-Media\-Player class \hypertarget{class_o_s_p_main_dialog_a30be772a3ccc49a2e06ce3417f2f2d5c}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!pl@{pl}}
+\index{pl@{pl}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{pl}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::pl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a30be772a3ccc49a2e06ce3417f2f2d5c}
+This slot is connected to Play Button of the Script Engine. Adds the play audio command to your script 
+
+Definition at line 624 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a42763b78bcbcb452a8c8054de364f6fc}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!play@{play}}
+\index{play@{play}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a42763b78bcbcb452a8c8054de364f6fc}
+This signal is connected to play of Q\-Media\-Player class \hypertarget{class_o_s_p_main_dialog_ad3fec79d0def25964f5adab237abf682}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!play\-Audio@{play\-Audio}}
+\index{play\-Audio@{play\-Audio}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{play\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::play\-Audio (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{fname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_ad3fec79d0def25964f5adab237abf682}
+This function is used to play audio files. This is used to give play Audio functionality in our script 
+
+Definition at line 587 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a2427cbbbec577cd4df51f5a993a74bf8}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!play\-Clicked@{play\-Clicked}}
+\index{play\-Clicked@{play\-Clicked}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{play\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::play\-Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a2427cbbbec577cd4df51f5a993a74bf8}
+This slot is connected to play and pause button. 
+
+Definition at line 702 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_af8d49ae6630b09271fe3f3eecf083e75}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!pos\-\_\-received@{pos\-\_\-received}}
+\index{pos\-\_\-received@{pos\-\_\-received}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{pos\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::pos\-\_\-received (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{x, }
+\item[{Q\-String}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_af8d49ae6630b09271fe3f3eecf083e75}
+This slot is called when the laser device sends us the coordinates The coordinates are then used for setting the references in transformation matrix 
+\begin{DoxyParams}{Parameters}
+{\em x} & Azimuth in string. \\
+\hline
+{\em y} & Altitude in string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 182 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a47ea6fd9f98519cc31e72f5de34a9306}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!retranslate@{retranslate}}
+\index{retranslate@{retranslate}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{retranslate}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::retranslate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a47ea6fd9f98519cc31e72f5de34a9306}
+This function retranslate the language of plugin. 
+
+Definition at line 83 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_add7447fb9aa1e92241e9dafb24be9eee}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!right\-Pressed@{right\-Pressed}}
+\index{right\-Pressed@{right\-Pressed}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{right\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::right\-Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_add7447fb9aa1e92241e9dafb24be9eee}
+This functions is called when the buttons Right(mv\-Right) is pressed 
+
+Definition at line 290 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a3a2279d534043892ce314ebd3676a946}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!save\-Script@{save\-Script}}
+\index{save\-Script@{save\-Script}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{save\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::save\-Script (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a3a2279d534043892ce314ebd3676a946}
+This function is used to save the script 
+
+Definition at line 393 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a4ef91ba4a5c2de748ae3863108f64ed1}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!select\-Device@{select\-Device}}
+\index{select\-Device@{select\-Device}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{select\-Device}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::select\-Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a4ef91ba4a5c2de748ae3863108f64ed1}
+This slot is connected to the select\-Dev button of the gui. This slot shows a list of connected device to select from after selection enables many buttons. 
+
+Definition at line 241 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a440099805a95258b244578f44797b2fb}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!set\-Reference@{set\-Reference}}
+\index{set\-Reference@{set\-Reference}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{set\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::set\-Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a440099805a95258b244578f44797b2fb}
+This function sets three references for the matrix transformation basically it sends three references for matrix transformation to the device for its calculations 
+
+Definition at line 321 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a9ed0230ee9b9aca9d377cbe489b8cc05}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!set\-Signals@{set\-Signals}}
+\index{set\-Signals@{set\-Signals}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{set\-Signals}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::set\-Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_o_s_p_main_dialog_a9ed0230ee9b9aca9d377cbe489b8cc05}
+This function connects the various gui signals to its corresponding slots. This function is called in the \hyperlink{class_o_s_p_main_dialog_a57985a48791e4fbfd747a7d7e14ec4ca}{create\-Dialog\-Content()} function of this class. 
+
+Definition at line 106 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_ab8473d80b4c5220361b55d310c033858}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!set\-Volume@{set\-Volume}}
+\index{set\-Volume@{set\-Volume}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{set\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::set\-Volume (
+\begin{DoxyParamCaption}
+\item[{int}]{volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_ab8473d80b4c5220361b55d310c033858}
+This slot is connected to volume slider. 
+\begin{DoxyParams}{Parameters}
+{\em volume} & by slider \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 678 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_ace2c5f32c8ec0512f8bcb972f5350e5f}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!show\-Message@{show\-Message}}
+\index{show\-Message@{show\-Message}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{show\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::show\-Message (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{m}
+\end{DoxyParamCaption}
+)}}\label{class_o_s_p_main_dialog_ace2c5f32c8ec0512f8bcb972f5350e5f}
+This function is called to display error/information messages 
+
+Definition at line 208 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a53f55236a4ab1d0569fc8b2be4a3753e}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!stop@{stop}}
+\index{stop@{stop}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_o_s_p_main_dialog_a53f55236a4ab1d0569fc8b2be4a3753e}
+This signal is connected to stop of Q\-Media\-Player class \hypertarget{class_o_s_p_main_dialog_a5781ec6f0fa33cea8174fcaf335664af}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!stop\-Click@{stop\-Click}}
+\index{stop\-Click@{stop\-Click}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{stop\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::stop\-Click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a5781ec6f0fa33cea8174fcaf335664af}
+This slot is connected to stop button. 
+
+Definition at line 689 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a1d029fbbacb738ec5f96387afc4a148c}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!up\-Pressed@{up\-Pressed}}
+\index{up\-Pressed@{up\-Pressed}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{up\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::up\-Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a1d029fbbacb738ec5f96387afc4a148c}
+This functions is called when the buttons Up(mv\-Up) is pressed 
+
+Definition at line 282 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_ad59f47b89d0a2d70d6ec56829069641d}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!waitforsec@{waitforsec}}
+\index{waitforsec@{waitforsec}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{waitforsec}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::waitforsec (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{sec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_ad59f47b89d0a2d70d6ec56829069641d}
+This is used when playing the script. This is used to give wait functionality in the script 
+\begin{DoxyParams}{Parameters}
+{\em min} & time in minute \\
+\hline
+{\em sec} & time in second \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 571 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+\hypertarget{class_o_s_p_main_dialog_a8f6b102204eb71c786ddc3d05e80601e}{\index{O\-S\-P\-Main\-Dialog@{O\-S\-P\-Main\-Dialog}!wt@{wt}}
+\index{wt@{wt}!OSPMainDialog@{O\-S\-P\-Main\-Dialog}}
+\subsubsection[{wt}]{\setlength{\rightskip}{0pt plus 5cm}void O\-S\-P\-Main\-Dialog\-::wt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_o_s_p_main_dialog_a8f6b102204eb71c786ddc3d05e80601e}
+This slot is connected to wait button of the Script Engine. Adds the wait command to your script 
+
+Definition at line 658 of file O\-S\-P\-Main\-Dialog.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{_o_s_p_main_dialog_8hpp}{O\-S\-P\-Main\-Dialog.\-hpp}\item 
+gui/\hyperlink{_o_s_p_main_dialog_8cpp}{O\-S\-P\-Main\-Dialog.\-cpp}\end{DoxyCompactItemize}

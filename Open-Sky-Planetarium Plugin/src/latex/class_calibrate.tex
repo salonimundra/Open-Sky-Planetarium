@@ -1,0 +1,264 @@
+\hypertarget{class_calibrate}{\section{Calibrate Class Reference}
+\label{class_calibrate}\index{Calibrate@{Calibrate}}
+}
+
+
+Library for coordinates transformations. Calculates the equivalent coordinates between both coordinate systems equatorial and horizontal.  
+
+
+
+
+{\ttfamily \#include $<$Calibrate.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_calibrate_af7fd8ee2339ee66f6f8e4d9953025796}{Calibrate} ()
+\item 
+void \hyperlink{class_calibrate_aa995deb89e9bf1afe158a9863feeb9b5}{set\-Time} (double t0)
+\item 
+void \hyperlink{class_calibrate_accdf063b97064170400a396d50ca364a}{set\-Ref\-\_\-1} (double ar, double dec, double t, double ac, double alt)
+\item 
+void \hyperlink{class_calibrate_a0de0f875a4426d90c7c67cf9aa7a117c}{set\-Ref\-\_\-2} (double ar, double dec, double t, double ac, double alt)
+\item 
+void \hyperlink{class_calibrate_af3f3b8373b846d5e19006feef1a29c96}{set\-Ref\-\_\-3} (double ar, double dec, double t, double ac, double alt)
+\item 
+void \hyperlink{class_calibrate_a21d7622c2356e44897dbfed2f9d9d1d9}{auto\-Ref\-\_\-3} ()
+\item 
+bool \hyperlink{class_calibrate_a55a935c9efccedcc965cc9de4da5d3be}{is\-Configured} ()
+\item 
+void \hyperlink{class_calibrate_a611a5a3f616c57325493a4552aadab2c}{get\-H\-Coords} (double ar, double dec, double t, double $\ast$ac, double $\ast$alt)
+\item 
+void \hyperlink{class_calibrate_ab7e978f3fff297d01addb3decdc2ae15}{get\-E\-Coords} (double ac, double alt, double t, double $\ast$ar, double $\ast$dec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Library for coordinates transformations. Calculates the equivalent coordinates between both coordinate systems equatorial and horizontal. 
+
+It's based on Toshimi Taki's matrix method for coordinates transformation\-: \href{http://www.geocities.jp/toshimi_taki/matrix/matrix.htm}{\tt http\-://www.\-geocities.\-jp/toshimi\-\_\-taki/matrix/matrix.\-htm} Contains the necessary methods for setting the initial time, the reference objects, the transformation matrix, and to calculate the equivalent vectors between both coordinate systems. 
+
+Definition at line 36 of file Calibrate.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_calibrate_af7fd8ee2339ee66f6f8e4d9953025796}{\index{Calibrate@{Calibrate}!Calibrate@{Calibrate}}
+\index{Calibrate@{Calibrate}!Calibrate@{Calibrate}}
+\subsubsection[{Calibrate}]{\setlength{\rightskip}{0pt plus 5cm}Calibrate\-::\-Calibrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_af7fd8ee2339ee66f6f8e4d9953025796}
+Class constructor. 
+
+Definition at line 48 of file Calibrate.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_calibrate_a21d7622c2356e44897dbfed2f9d9d1d9}{\index{Calibrate@{Calibrate}!auto\-Ref\-\_\-3@{auto\-Ref\-\_\-3}}
+\index{auto\-Ref\-\_\-3@{auto\-Ref\-\_\-3}!Calibrate@{Calibrate}}
+\subsubsection[{auto\-Ref\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::auto\-Ref\-\_\-3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_a21d7622c2356e44897dbfed2f9d9d1d9}
+Third reference object calculated from the two others ones.
+
+Calculates the cross product of the two first reference objects in both coordinates systems, in order to obtain the third one. These two first objects must have 90º from each other, approximately (from 60º to 120º is enough to obtain goods results). 
+
+Definition at line 175 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_ab7e978f3fff297d01addb3decdc2ae15}{\index{Calibrate@{Calibrate}!get\-E\-Coords@{get\-E\-Coords}}
+\index{get\-E\-Coords@{get\-E\-Coords}!Calibrate@{Calibrate}}
+\subsubsection[{get\-E\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::get\-E\-Coords (
+\begin{DoxyParamCaption}
+\item[{double}]{ac, }
+\item[{double}]{alt, }
+\item[{double}]{t, }
+\item[{double $\ast$}]{ar, }
+\item[{double $\ast$}]{dec}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_ab7e978f3fff297d01addb3decdc2ae15}
+Equatorial coordinates calculated from the horizontal ones and time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Azimuth (horizontal coordinates). \\
+\hline
+{\em alt} & Altitude (horizontal coordinates). \\
+\hline
+{\em t} & Unix Timestamp of the Observation. \\
+\hline
+{\em $\ast$ar} & Pointer to double\-: Returns the right ascension (equatorial coordinates). \\
+\hline
+{\em $\ast$dec} & Pointer to double\-: Returns the declination (equatorial coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 260 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_a611a5a3f616c57325493a4552aadab2c}{\index{Calibrate@{Calibrate}!get\-H\-Coords@{get\-H\-Coords}}
+\index{get\-H\-Coords@{get\-H\-Coords}!Calibrate@{Calibrate}}
+\subsubsection[{get\-H\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::get\-H\-Coords (
+\begin{DoxyParamCaption}
+\item[{double}]{ar, }
+\item[{double}]{dec, }
+\item[{double}]{t, }
+\item[{double $\ast$}]{ac, }
+\item[{double $\ast$}]{alt}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_a611a5a3f616c57325493a4552aadab2c}
+Horizontal coordinates calculated from the equatorial ones and time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates) \\
+\hline
+{\em t} & Unix Timestamp of the Observation. \\
+\hline
+{\em $\ast$ac} & Pointer to double\-: Returns the azimuth (horizontal coordiantes). \\
+\hline
+{\em $\ast$alt} & Pointer to double\-: Returns the altitude (horizontal coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 231 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_a55a935c9efccedcc965cc9de4da5d3be}{\index{Calibrate@{Calibrate}!is\-Configured@{is\-Configured}}
+\index{is\-Configured@{is\-Configured}!Calibrate@{Calibrate}}
+\subsubsection[{is\-Configured}]{\setlength{\rightskip}{0pt plus 5cm}bool Calibrate\-::is\-Configured (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_a55a935c9efccedcc965cc9de4da5d3be}
+Indicates if the three reference objects has been calculated.
+
+\begin{DoxyReturn}{Returns}
+Boolean. 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_accdf063b97064170400a396d50ca364a}{\index{Calibrate@{Calibrate}!set\-Ref\-\_\-1@{set\-Ref\-\_\-1}}
+\index{set\-Ref\-\_\-1@{set\-Ref\-\_\-1}!Calibrate@{Calibrate}}
+\subsubsection[{set\-Ref\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::set\-Ref\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{double}]{ar, }
+\item[{double}]{dec, }
+\item[{double}]{t, }
+\item[{double}]{ac, }
+\item[{double}]{alt}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_accdf063b97064170400a396d50ca364a}
+Sets the first reference object from the coordinates in both coordinates systems for that object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates). \\
+\hline
+{\em t} & Unix Timestamp of the Observation. \\
+\hline
+{\em ac} & Azimuth (horizontal coordinates). \\
+\hline
+{\em alt} & Altitude (horizontal coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 127 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_a0de0f875a4426d90c7c67cf9aa7a117c}{\index{Calibrate@{Calibrate}!set\-Ref\-\_\-2@{set\-Ref\-\_\-2}}
+\index{set\-Ref\-\_\-2@{set\-Ref\-\_\-2}!Calibrate@{Calibrate}}
+\subsubsection[{set\-Ref\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::set\-Ref\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{double}]{ar, }
+\item[{double}]{dec, }
+\item[{double}]{t, }
+\item[{double}]{ac, }
+\item[{double}]{alt}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_a0de0f875a4426d90c7c67cf9aa7a117c}
+Sets the second reference object from the coordinates in both coordinates systems for that object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates). \\
+\hline
+{\em t} & Unix Timestamp of the Observation. \\
+\hline
+{\em ac} & Azimuth (horizontal coordinates). \\
+\hline
+{\em alt} & Altitude (horizontal coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 141 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_af3f3b8373b846d5e19006feef1a29c96}{\index{Calibrate@{Calibrate}!set\-Ref\-\_\-3@{set\-Ref\-\_\-3}}
+\index{set\-Ref\-\_\-3@{set\-Ref\-\_\-3}!Calibrate@{Calibrate}}
+\subsubsection[{set\-Ref\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::set\-Ref\-\_\-3 (
+\begin{DoxyParamCaption}
+\item[{double}]{ar, }
+\item[{double}]{dec, }
+\item[{double}]{t, }
+\item[{double}]{ac, }
+\item[{double}]{alt}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_af3f3b8373b846d5e19006feef1a29c96}
+Sets the third reference object from the coordinates in both coordinates systems for that object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & Right Ascension (equatorial coordinates). \\
+\hline
+{\em dec} & Declination (equatorial coordinates). \\
+\hline
+{\em t} & Unix Timestamp of the Observation. \\
+\hline
+{\em ac} & Azimuth (horizontal coordinates). \\
+\hline
+{\em alt} & Altitude (horizontal coordinates). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 155 of file Calibrate.\-cpp.
+
+\hypertarget{class_calibrate_aa995deb89e9bf1afe158a9863feeb9b5}{\index{Calibrate@{Calibrate}!set\-Time@{set\-Time}}
+\index{set\-Time@{set\-Time}!Calibrate@{Calibrate}}
+\subsubsection[{set\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Calibrate\-::set\-Time (
+\begin{DoxyParamCaption}
+\item[{double}]{t0}
+\end{DoxyParamCaption}
+)}}\label{class_calibrate_aa995deb89e9bf1afe158a9863feeb9b5}
+Sets the initial time.
+
+This parameter is used in order to consider time passing on horizontal coordinates system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t0} & Unix Timestamp of the initial observation time. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file Calibrate.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_calibrate_8hpp}{Calibrate.\-hpp}\item 
+\hyperlink{_calibrate_8cpp}{Calibrate.\-cpp}\end{DoxyCompactItemize}

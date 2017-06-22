@@ -1,0 +1,14 @@
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/install.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/list_install_components.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/install/strip.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/install/local.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/rebuild_cache.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles/edit_cache.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/install.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/list_install_components.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/rebuild_cache.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/install/strip.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/install/local.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/edit_cache.dir
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir

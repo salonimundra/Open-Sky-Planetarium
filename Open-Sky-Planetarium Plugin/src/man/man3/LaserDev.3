@@ -1,0 +1,164 @@
+.TH "LaserDev" 3 "Mon Jan 30 2017" "OpenSky Planetarium" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LaserDev \- 
+.PP
+This class is used for funtions related to motion and turning the laser on and off\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LaserDev\&.hpp>\fP
+.PP
+Inherits QObject\&.
+.SS "Public Slots"
+
+.in +1c
+.ti -1c
+.RI "void \fBgetPos\fP ()"
+.br
+.ti -1c
+.RI "void \fBprocessError\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBprocessTimeout\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBsread\fP (const QString &s)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "void \fBmove\fP (double x, double y)"
+.br
+.ti -1c
+.RI "void \fBmovx\fP (int signDir)"
+.br
+.ti -1c
+.RI "void \fBmovy\fP (int signDir)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBlaserOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBlaserOff\fP ()"
+.br
+.in -1c
+.SS "Signals"
+
+.in +1c
+.ti -1c
+.RI "void \fBdebug_send\fP (QString s)"
+.br
+.ti -1c
+.RI "void \fBpos_received\fP (QString, QString)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLaserDev\fP (QObject *parent=0)"
+.br
+.ti -1c
+.RI "\fB~LaserDev\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPortName\fP (const QString &s)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used for funtions related to motion and turning the laser on and off\&. 
+.PP
+Definition at line 32 of file LaserDev\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "LaserDev::LaserDev (QObject *parent = \fC0\fP)"
+Class constructor\&. 
+.PP
+Definition at line 35 of file LaserDev\&.cpp\&.
+.SS "LaserDev::~LaserDev ()"
+Class destructor\&. 
+.PP
+Definition at line 48 of file LaserDev\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void LaserDev::debug_send (QStrings)\fC [signal]\fP"
+Sending the debug signal 
+.SS "void LaserDev::getPos ()\fC [slot]\fP"
+This function is called to get the current position of the telescope in radians 
+.PP
+Definition at line 151 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::init ()\fC [slot]\fP"
+sends the 'init' command to the device and after 'done_init' is received from the device, emits 'init_received' signal 
+.PP
+Definition at line 141 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::laserOff ()\fC [slot]\fP"
+To turn the laser off 
+.PP
+Definition at line 222 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::laserOn ()\fC [slot]\fP"
+to turn the laser on 
+.PP
+Definition at line 212 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::move (doublex, doubley)\fC [slot]\fP"
+Sends the telescope coordinates to the device 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP Azimuth fed to arduino\&. 
+.br
+\fIy\fP Altitude fed to arduino\&. 
+.RE
+.PP
+
+.PP
+Definition at line 162 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::movx (intsignDir)\fC [slot]\fP"
+To move the laser in x direction depending on signDir 
+.PP
+Definition at line 191 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::movy (intsignDir)\fC [slot]\fP"
+To move the laser in y direction depending on signDir /param signDir 0 to move up 1 to move down 
+.PP
+Definition at line 178 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::pos_received (QString, QString)\fC [signal]\fP"
+Recieving the position from arduino 
+.SS "void LaserDev::processError (const QString &s)\fC [slot]\fP"
+slot for the error, sends the signal to \fBOSPMainDialog\fP 
+.PP
+Definition at line 56 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::processTimeout (const QString &s)\fC [slot]\fP"
+slot for the timeout , sends the signal to \fBOSPMainDialog\fP 
+.PP
+Definition at line 63 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::setPortName (const QString &s)"
+function for setting the portName 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP port name 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::sread (const QString &s)\fC [slot]\fP"
+This function is called after writing to the serial port\&. This function performs various steps like echoData, getSteps, getHorizontalCoords, getVerticalCoords 
+.PP
+Definition at line 81 of file LaserDev\&.cpp\&.
+.SS "void LaserDev::stop ()\fC [slot]\fP"
+to stop the laser movements in either of the direction x or y /param signDir 0 to move up 1 to move down 
+.PP
+Definition at line 203 of file LaserDev\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenSky Planetarium from the source code\&.
