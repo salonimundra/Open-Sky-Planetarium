@@ -1,8 +1,16 @@
 #ifndef OSP_h
 #define OSP_h
+<<<<<<< HEAD
 #include <math.h>
 #include <string.h>
 
+=======
+
+	#include <math.h>
+	#include <string.h>
+
+	
+>>>>>>> 084a94b23e3667665f9b981994935d543670d6df
 	/**
 	 * \brief Class that manages movements and the laser of the device
 	 *
@@ -10,11 +18,22 @@
 	 * within a range of 360º degrees in horizontal, and 180º on vertical.
 	 * To the movements uses the DDA algorithm (Digital Differential Algorithm).
 	 */
+<<<<<<< HEAD
 
 class OSP{
      public:      
      int delayValue; 
      int step1, dir1, enable1, step2, dir2, enable2;
+=======
+	class OSP{
+     public:      
+     
+    // int pulPin, 
+   //  int pulPin, dirPin, enblPin, pulPin1, dirPin1, enblPin1, ledPin, ddir1, ddir2, motor1, motor2, sensor1,sensor2, _stPin_x, _stPin_y, _dirPin, _enable_x, _enable_y;
+
+int step1, dir1, enable1, step2, dir2, enable2, ledPin, ddir1, ddir2, motor1, motor2, sensor1,sensor2, _stPin_x, _stPin_y, _dirPin, _enable_x, _enable_y;
+
+>>>>>>> 084a94b23e3667665f9b981994935d543670d6df
      int stepx, stepy;
      int low;
      int high;
@@ -187,8 +206,16 @@ class OSP{
 			 * \param enable_y Turn On/Off power supply on Y axis motor
       *
 			 */
+<<<<<<< HEAD
 
 void setMotorsPins(int step1, int dir1, int enable1, int step2, int dir2, int enable2);
+=======
+			//void _step(int steps, bool dir);
+		//	void setMotorsPins(int pulPin, int dirPin,
+// int enblPin, int pulPin1, int dirPin1, int enblPin1, int ledPin, int ddir1, int ddir2, int motor1, int motor2, int sensor1, int sensor2);
+
+void setMotorsPins(int step1, int dir1, int enable1, int step2, int dir2, int enable2, int ledPin, int ddir1, int ddir2, int motor1, int motor2, int sensor1, int sensor2);
+>>>>>>> 084a94b23e3667665f9b981994935d543670d6df
       
       
 			/**
@@ -217,7 +244,11 @@ void setMotorsPins(int step1, int dir1, int enable1, int step2, int dir2, int en
 			 * \param dir Direction: True means clockwise direction
 			 * \return Returns true in case of reaches a limit sensor
 			 */
+<<<<<<< HEAD
       
+=======
+			// bool movx(bool dir,  int pulPin, int dirPin);
+>>>>>>> 084a94b23e3667665f9b981994935d543670d6df
 			bool movx(bool dir,  int step1, int dir1);
 			/**
 			 * Accelerated movement for Y axis
@@ -227,7 +258,11 @@ void setMotorsPins(int step1, int dir1, int enable1, int step2, int dir2, int en
 			 * \param dir Direction: True means upwards
 			 * \return Returns true in case of reaches a limit sensor
 			 */
+<<<<<<< HEAD
 		
+=======
+			// bool movy(bool dir,  int pulPin1, int dirPin1);
+>>>>>>> 084a94b23e3667665f9b981994935d543670d6df
      bool movy(bool dir,  int step2, int dir2);
       void OSP::_moveEqua(int x, int y);
 	};
