@@ -1,11 +1,9 @@
-OpenSkyPlanetarium plugin for Stellarium
-=====================================
+# OpenSkyPlanetarium plugin for Stellarium
 
 Plugin for controlling the Arduino-Based Laser and Stellarium to create Planetarium shows.
 
 
-BUILDING THE PLUGIN
-===================
+## Building the Plugin
 
 Please note, these instructions are only directly applicable to Linux.
 Windows and OSX targets will probably require modification of the
@@ -25,11 +23,13 @@ source tree.  The Stellarium build directory is expected to be:
 
 3.  Run:
 
+```bash
   cmake ../.. 
   make
   make install
+```
 
 If all goes well, the relevant files should be built and copied to your 
-~/.stellarium/modules directory.
+`~/.stellarium/modules directory.`
 
 
