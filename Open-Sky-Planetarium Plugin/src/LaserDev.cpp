@@ -83,18 +83,23 @@ void LaserDev::sread(const QString &s){
 	QRegExp exp("t_([0-9\\.\\-]{4,9})_([0-9\\.\\-]{4,9})");
 	if(recvd.compare("done_init")==0){
 		emit debug_send(recvd);
+            getPos();
 	}
 	else if(recvd.compare("done_movu")==0){
 		emit debug_send(recvd);
+            getPos();
 	}
 	else if(recvd.compare("done_movd")==0){
 		emit debug_send(recvd);
+            getPos();
 	}
 	else if(recvd.compare("done_movr")==0){
 		emit debug_send(recvd);
+            getPos();
 	}
 	else if(recvd.compare("done_movl")==0){
 		emit debug_send(recvd);
+            getPos();
 	}
 	else if(recvd.compare("done_move")==0){
 		emit debug_send(recvd);
@@ -105,8 +110,15 @@ void LaserDev::sread(const QString &s){
 	else if(recvd.compare("done_loff")==0){
 		emit debug_send(recvd);
 	}
+        else if(recvd.compare("done_high_speed")==0){
+                emit debug_send(recvd);
+        }
+        else if(recvd.compare("done_low_speed")==0){
+                emit debug_send(recvd);
+        }
         else if(recvd.compare("done_reset")==0){
                emit debug_send(recvd);
+            getPos();
            }
         else if(recvd.compare("done_lase")==0){
                emit debug_send("intensity");
@@ -159,7 +171,7 @@ getPos():
 */
 void LaserDev :: getPos(){
 	comm=QString("post");
-	thread.sendRequest(osp_serialPort,1000,QString(comm));
+        thread.sendRequest(osp_serialPort,100,QString(comm));
 }
 
 
@@ -189,7 +201,7 @@ void LaserDev :: movy(int signDir){
 		comm=QString("movu");
 	else
 		comm=QString("movd");
-	thread.sendRequest(osp_serialPort,1000,QString(comm));
+        thread.sendRequest(osp_serialPort,100,QString(comm));
 			
 }
 
@@ -202,7 +214,7 @@ void LaserDev :: movx(int signDir){
 		comm=QString("movr");
 	else
 		comm=QString("movl");
-	thread.sendRequest(osp_serialPort,1000,QString(comm));
+        thread.sendRequest(osp_serialPort,100,QString(comm));
 }
 
 /*
@@ -211,7 +223,7 @@ stop():
 */
 void LaserDev :: stop(){
 	comm=QString("stop");
-	thread.sendRequest(osp_serialPort,1000,QString(comm));
+        thread.sendRequest(osp_serialPort,100,QString(comm));
 }
 
 /*
@@ -257,4 +269,19 @@ void LaserDev ::setIntensity(int x){
     thread.sendRequest(osp_serialPort,1000,QString(comm));
 }
 
-
+/*
+CoarseAdj():
+    to let the motors go on high speed
+*/
+void LaserDev :: CoarseAdj(){
+    comm=QString("coad");
+    thread.sendRequest(osp_serialPort,1000,QString(comm));
+}
+/*
+FineAdj():
+    to let the motors go on a low speed
+*/
+void LaserDev :: FineAdj(){
+    comm=QString("fiad");
+    thread.sendRequest(osp_serialPort,1000,QString(comm));
+}

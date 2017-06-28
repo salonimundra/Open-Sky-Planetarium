@@ -1010,6 +1010,7 @@ src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudh
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QCompleter
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QFileDialog
+src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QFormLayout
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QFrame
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QGraphicsProxyWidget
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QGraphicsSceneResizeEvent
@@ -1020,6 +1021,7 @@ src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudh
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QHeaderView
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QInputDialog
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLabel
+src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLayout
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QMessageBox
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QProgressBar
@@ -1048,6 +1050,7 @@ src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudh
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qdesktopwidget.h
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qdialog.h
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qfiledialog.h
+src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qformlayout.h
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qframe.h
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qgraphicsitem.h
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o: /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qgraphicslayoutitem.h

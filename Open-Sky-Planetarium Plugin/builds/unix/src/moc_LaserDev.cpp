@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_LaserDev_t {
-    QByteArrayData data[21];
-    char stringdata0[153];
+    QByteArrayData data[23];
+    char stringdata0[171];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -49,14 +49,16 @@ QT_MOC_LITERAL(16, 109, 4), // "stop"
 QT_MOC_LITERAL(17, 114, 7), // "laserOn"
 QT_MOC_LITERAL(18, 122, 8), // "laserOff"
 QT_MOC_LITERAL(19, 131, 12), // "setIntensity"
-QT_MOC_LITERAL(20, 144, 8) // "resetAll"
+QT_MOC_LITERAL(20, 144, 8), // "resetAll"
+QT_MOC_LITERAL(21, 153, 9), // "CoarseAdj"
+QT_MOC_LITERAL(22, 163, 7) // "FineAdj"
 
     },
     "LaserDev\0debug_send\0\0s\0pos_received\0"
     "getPos\0processError\0processTimeout\0"
     "sread\0init\0move\0x\0y\0movx\0signDir\0movy\0"
     "stop\0laserOn\0laserOff\0setIntensity\0"
-    "resetAll"
+    "resetAll\0CoarseAdj\0FineAdj"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +68,7 @@ static const uint qt_meta_data_LaserDev[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,23 +76,25 @@ static const uint qt_meta_data_LaserDev[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   89,    2, 0x06 /* Public */,
-       4,    2,   92,    2, 0x06 /* Public */,
+       1,    1,   99,    2, 0x06 /* Public */,
+       4,    2,  102,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   97,    2, 0x0a /* Public */,
-       6,    1,   98,    2, 0x0a /* Public */,
-       7,    1,  101,    2, 0x0a /* Public */,
-       8,    1,  104,    2, 0x0a /* Public */,
-       9,    0,  107,    2, 0x0a /* Public */,
-      10,    2,  108,    2, 0x0a /* Public */,
-      13,    1,  113,    2, 0x0a /* Public */,
-      15,    1,  116,    2, 0x0a /* Public */,
-      16,    0,  119,    2, 0x0a /* Public */,
-      17,    0,  120,    2, 0x0a /* Public */,
-      18,    0,  121,    2, 0x0a /* Public */,
-      19,    1,  122,    2, 0x0a /* Public */,
-      20,    0,  125,    2, 0x0a /* Public */,
+       5,    0,  107,    2, 0x0a /* Public */,
+       6,    1,  108,    2, 0x0a /* Public */,
+       7,    1,  111,    2, 0x0a /* Public */,
+       8,    1,  114,    2, 0x0a /* Public */,
+       9,    0,  117,    2, 0x0a /* Public */,
+      10,    2,  118,    2, 0x0a /* Public */,
+      13,    1,  123,    2, 0x0a /* Public */,
+      15,    1,  126,    2, 0x0a /* Public */,
+      16,    0,  129,    2, 0x0a /* Public */,
+      17,    0,  130,    2, 0x0a /* Public */,
+      18,    0,  131,    2, 0x0a /* Public */,
+      19,    1,  132,    2, 0x0a /* Public */,
+      20,    0,  135,    2, 0x0a /* Public */,
+      21,    0,  136,    2, 0x0a /* Public */,
+      22,    0,  137,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -109,6 +113,8 @@ static const uint qt_meta_data_LaserDev[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   11,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -135,6 +141,8 @@ void LaserDev::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 12: _t->laserOff(); break;
         case 13: _t->setIntensity((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 14: _t->resetAll(); break;
+        case 15: _t->CoarseAdj(); break;
+        case 16: _t->FineAdj(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -182,13 +190,13 @@ int LaserDev::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 17)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 15;
+        _id -= 17;
     }
     return _id;
 }

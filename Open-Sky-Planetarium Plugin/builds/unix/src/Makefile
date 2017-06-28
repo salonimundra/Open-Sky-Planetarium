@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full
+CMAKE_SOURCE_DIR = "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix
+CMAKE_BINARY_DIR = "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(CMAKE_COMMAND) -E cmake_progress_start /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/progress.marks
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles 0
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/CMakeFiles" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/CMakeFiles/progress.marks"
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/OpenSkyPlanetarium-static.dir/rule:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenSkyPlanetarium-static.dir/rule
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenSkyPlanetarium-static.dir/rule
 .PHONY : src/CMakeFiles/OpenSkyPlanetarium-static.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ OpenSkyPlanetarium-static: src/CMakeFiles/OpenSkyPlanetarium-static.dir/rule
 
 # fast build rule for target.
 OpenSkyPlanetarium-static/fast:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/build
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/build
 .PHONY : OpenSkyPlanetarium-static/fast
 
 # Convenience name for target.
 src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/rule:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/rule
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/rule
 .PHONY : src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/rule
 
 # Convenience name for target.
@@ -181,7 +181,7 @@ OpenSkyPlanetarium-static_automoc: src/CMakeFiles/OpenSkyPlanetarium-static_auto
 
 # fast build rule for target.
 OpenSkyPlanetarium-static_automoc/fast:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build
 .PHONY : OpenSkyPlanetarium-static_automoc/fast
 
 Calibrate.o: Calibrate.cpp.o
@@ -190,7 +190,7 @@ Calibrate.o: Calibrate.cpp.o
 
 # target to build an object file
 Calibrate.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.o
 .PHONY : Calibrate.cpp.o
 
 Calibrate.i: Calibrate.cpp.i
@@ -199,7 +199,7 @@ Calibrate.i: Calibrate.cpp.i
 
 # target to preprocess a source file
 Calibrate.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.i
 .PHONY : Calibrate.cpp.i
 
 Calibrate.s: Calibrate.cpp.s
@@ -208,7 +208,7 @@ Calibrate.s: Calibrate.cpp.s
 
 # target to generate assembly for a file
 Calibrate.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/Calibrate.cpp.s
 .PHONY : Calibrate.cpp.s
 
 LaserDev.o: LaserDev.cpp.o
@@ -217,7 +217,7 @@ LaserDev.o: LaserDev.cpp.o
 
 # target to build an object file
 LaserDev.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.o
 .PHONY : LaserDev.cpp.o
 
 LaserDev.i: LaserDev.cpp.i
@@ -226,7 +226,7 @@ LaserDev.i: LaserDev.cpp.i
 
 # target to preprocess a source file
 LaserDev.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.i
 .PHONY : LaserDev.cpp.i
 
 LaserDev.s: LaserDev.cpp.s
@@ -235,7 +235,7 @@ LaserDev.s: LaserDev.cpp.s
 
 # target to generate assembly for a file
 LaserDev.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/LaserDev.cpp.s
 .PHONY : LaserDev.cpp.s
 
 OpenSkyPlanetarium-static_automoc.o: OpenSkyPlanetarium-static_automoc.cpp.o
@@ -244,7 +244,7 @@ OpenSkyPlanetarium-static_automoc.o: OpenSkyPlanetarium-static_automoc.cpp.o
 
 # target to build an object file
 OpenSkyPlanetarium-static_automoc.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.o
 .PHONY : OpenSkyPlanetarium-static_automoc.cpp.o
 
 OpenSkyPlanetarium-static_automoc.i: OpenSkyPlanetarium-static_automoc.cpp.i
@@ -253,7 +253,7 @@ OpenSkyPlanetarium-static_automoc.i: OpenSkyPlanetarium-static_automoc.cpp.i
 
 # target to preprocess a source file
 OpenSkyPlanetarium-static_automoc.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.i
 .PHONY : OpenSkyPlanetarium-static_automoc.cpp.i
 
 OpenSkyPlanetarium-static_automoc.s: OpenSkyPlanetarium-static_automoc.cpp.s
@@ -262,7 +262,7 @@ OpenSkyPlanetarium-static_automoc.s: OpenSkyPlanetarium-static_automoc.cpp.s
 
 # target to generate assembly for a file
 OpenSkyPlanetarium-static_automoc.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium-static_automoc.cpp.s
 .PHONY : OpenSkyPlanetarium-static_automoc.cpp.s
 
 OpenSkyPlanetarium.o: OpenSkyPlanetarium.cpp.o
@@ -271,7 +271,7 @@ OpenSkyPlanetarium.o: OpenSkyPlanetarium.cpp.o
 
 # target to build an object file
 OpenSkyPlanetarium.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.o
 .PHONY : OpenSkyPlanetarium.cpp.o
 
 OpenSkyPlanetarium.i: OpenSkyPlanetarium.cpp.i
@@ -280,7 +280,7 @@ OpenSkyPlanetarium.i: OpenSkyPlanetarium.cpp.i
 
 # target to preprocess a source file
 OpenSkyPlanetarium.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.i
 .PHONY : OpenSkyPlanetarium.cpp.i
 
 OpenSkyPlanetarium.s: OpenSkyPlanetarium.cpp.s
@@ -289,7 +289,7 @@ OpenSkyPlanetarium.s: OpenSkyPlanetarium.cpp.s
 
 # target to generate assembly for a file
 OpenSkyPlanetarium.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/OpenSkyPlanetarium.cpp.s
 .PHONY : OpenSkyPlanetarium.cpp.s
 
 SerialCom.o: SerialCom.cpp.o
@@ -298,7 +298,7 @@ SerialCom.o: SerialCom.cpp.o
 
 # target to build an object file
 SerialCom.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.o
 .PHONY : SerialCom.cpp.o
 
 SerialCom.i: SerialCom.cpp.i
@@ -307,7 +307,7 @@ SerialCom.i: SerialCom.cpp.i
 
 # target to preprocess a source file
 SerialCom.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.i
 .PHONY : SerialCom.cpp.i
 
 SerialCom.s: SerialCom.cpp.s
@@ -316,7 +316,7 @@ SerialCom.s: SerialCom.cpp.s
 
 # target to generate assembly for a file
 SerialCom.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/SerialCom.cpp.s
 .PHONY : SerialCom.cpp.s
 
 gui/OSPMainDialog.o: gui/OSPMainDialog.cpp.o
@@ -325,7 +325,7 @@ gui/OSPMainDialog.o: gui/OSPMainDialog.cpp.o
 
 # target to build an object file
 gui/OSPMainDialog.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.o
 .PHONY : gui/OSPMainDialog.cpp.o
 
 gui/OSPMainDialog.i: gui/OSPMainDialog.cpp.i
@@ -334,7 +334,7 @@ gui/OSPMainDialog.i: gui/OSPMainDialog.cpp.i
 
 # target to preprocess a source file
 gui/OSPMainDialog.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.i
 .PHONY : gui/OSPMainDialog.cpp.i
 
 gui/OSPMainDialog.s: gui/OSPMainDialog.cpp.s
@@ -343,7 +343,7 @@ gui/OSPMainDialog.s: gui/OSPMainDialog.cpp.s
 
 # target to generate assembly for a file
 gui/OSPMainDialog.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/gui/OSPMainDialog.cpp.s
 .PHONY : gui/OSPMainDialog.cpp.s
 
 qrc_OpenSkyPlanetarium.o: qrc_OpenSkyPlanetarium.cpp.o
@@ -352,7 +352,7 @@ qrc_OpenSkyPlanetarium.o: qrc_OpenSkyPlanetarium.cpp.o
 
 # target to build an object file
 qrc_OpenSkyPlanetarium.cpp.o:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.o
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.o
 .PHONY : qrc_OpenSkyPlanetarium.cpp.o
 
 qrc_OpenSkyPlanetarium.i: qrc_OpenSkyPlanetarium.cpp.i
@@ -361,7 +361,7 @@ qrc_OpenSkyPlanetarium.i: qrc_OpenSkyPlanetarium.cpp.i
 
 # target to preprocess a source file
 qrc_OpenSkyPlanetarium.cpp.i:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.i
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.i
 .PHONY : qrc_OpenSkyPlanetarium.cpp.i
 
 qrc_OpenSkyPlanetarium.s: qrc_OpenSkyPlanetarium.cpp.s
@@ -370,7 +370,7 @@ qrc_OpenSkyPlanetarium.s: qrc_OpenSkyPlanetarium.cpp.s
 
 # target to generate assembly for a file
 qrc_OpenSkyPlanetarium.cpp.s:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.s
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(MAKE) -f src/CMakeFiles/OpenSkyPlanetarium-static.dir/build.make src/CMakeFiles/OpenSkyPlanetarium-static.dir/qrc_OpenSkyPlanetarium.cpp.s
 .PHONY : qrc_OpenSkyPlanetarium.cpp.s
 
 # Help Target
@@ -419,6 +419,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

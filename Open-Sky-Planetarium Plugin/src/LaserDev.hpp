@@ -178,6 +178,16 @@ public slots:
     *	To hard reset the arduino
     */
     void resetAll();
+
+    /**
+        *	to turn the motor's high speed on
+        */
+        void CoarseAdj();
+
+        /**
+        *	To turn the motor's high speed off
+        */
+        void FineAdj();
 };
 
 

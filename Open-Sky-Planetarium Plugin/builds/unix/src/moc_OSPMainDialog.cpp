@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_OSPMainDialog_t {
-    QByteArrayData data[49];
-    char stringdata0[403];
+    QByteArrayData data[50];
+    char stringdata0[414];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -59,25 +59,26 @@ QT_MOC_LITERAL(26, 198, 12), // "rightPressed"
 QT_MOC_LITERAL(27, 211, 11), // "leftPressed"
 QT_MOC_LITERAL(28, 223, 12), // "laserToggled"
 QT_MOC_LITERAL(29, 236, 12), // "setIntensity"
-QT_MOC_LITERAL(30, 249, 12), // "setReference"
-QT_MOC_LITERAL(31, 262, 4), // "goTo"
-QT_MOC_LITERAL(32, 267, 10), // "openScript"
-QT_MOC_LITERAL(33, 278, 10), // "saveScript"
-QT_MOC_LITERAL(34, 289, 10), // "execScript"
-QT_MOC_LITERAL(35, 300, 13), // "compileScript"
-QT_MOC_LITERAL(36, 314, 5), // "laser"
-QT_MOC_LITERAL(37, 320, 9), // "playAudio"
-QT_MOC_LITERAL(38, 330, 10), // "waitforsec"
-QT_MOC_LITERAL(39, 341, 4), // "move"
-QT_MOC_LITERAL(40, 346, 2), // "gt"
-QT_MOC_LITERAL(41, 349, 2), // "pl"
-QT_MOC_LITERAL(42, 352, 2), // "lo"
-QT_MOC_LITERAL(43, 355, 2), // "wt"
-QT_MOC_LITERAL(44, 358, 5), // "reset"
-QT_MOC_LITERAL(45, 364, 9), // "setVolume"
-QT_MOC_LITERAL(46, 374, 6), // "volume"
-QT_MOC_LITERAL(47, 381, 11), // "playClicked"
-QT_MOC_LITERAL(48, 393, 9) // "stopClick"
+QT_MOC_LITERAL(30, 249, 10), // "adjToggled"
+QT_MOC_LITERAL(31, 260, 12), // "setReference"
+QT_MOC_LITERAL(32, 273, 4), // "goTo"
+QT_MOC_LITERAL(33, 278, 10), // "openScript"
+QT_MOC_LITERAL(34, 289, 10), // "saveScript"
+QT_MOC_LITERAL(35, 300, 10), // "execScript"
+QT_MOC_LITERAL(36, 311, 13), // "compileScript"
+QT_MOC_LITERAL(37, 325, 5), // "laser"
+QT_MOC_LITERAL(38, 331, 9), // "playAudio"
+QT_MOC_LITERAL(39, 341, 10), // "waitforsec"
+QT_MOC_LITERAL(40, 352, 4), // "move"
+QT_MOC_LITERAL(41, 357, 2), // "gt"
+QT_MOC_LITERAL(42, 360, 2), // "pl"
+QT_MOC_LITERAL(43, 363, 2), // "lo"
+QT_MOC_LITERAL(44, 366, 2), // "wt"
+QT_MOC_LITERAL(45, 369, 5), // "reset"
+QT_MOC_LITERAL(46, 375, 9), // "setVolume"
+QT_MOC_LITERAL(47, 385, 6), // "volume"
+QT_MOC_LITERAL(48, 392, 11), // "playClicked"
+QT_MOC_LITERAL(49, 404, 9) // "stopClick"
 
     },
     "OSPMainDialog\0comGOTO\0\0sra\0sdec\0comTURN\0"
@@ -86,11 +87,11 @@ QT_MOC_LITERAL(48, 393, 9) // "stopClick"
     "s\0pos_received\0x\0y\0selectDevice\0"
     "initDevice\0arrow_released\0upPressed\0"
     "downPressed\0rightPressed\0leftPressed\0"
-    "laserToggled\0setIntensity\0setReference\0"
-    "goTo\0openScript\0saveScript\0execScript\0"
-    "compileScript\0laser\0playAudio\0waitforsec\0"
-    "move\0gt\0pl\0lo\0wt\0reset\0setVolume\0"
-    "volume\0playClicked\0stopClick"
+    "laserToggled\0setIntensity\0adjToggled\0"
+    "setReference\0goTo\0openScript\0saveScript\0"
+    "execScript\0compileScript\0laser\0playAudio\0"
+    "waitforsec\0move\0gt\0pl\0lo\0wt\0reset\0"
+    "setVolume\0volume\0playClicked\0stopClick"
 };
 #undef QT_MOC_LITERAL
 
@@ -100,7 +101,7 @@ static const uint qt_meta_data_OSPMainDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      37,   14, // methods
+      38,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -108,45 +109,46 @@ static const uint qt_meta_data_OSPMainDialog[] = {
        7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    2,  199,    2, 0x06 /* Public */,
-       5,    1,  204,    2, 0x06 /* Public */,
-       7,    2,  207,    2, 0x06 /* Public */,
-      10,    1,  212,    2, 0x06 /* Public */,
-      12,    0,  215,    2, 0x06 /* Public */,
-      13,    0,  216,    2, 0x06 /* Public */,
-      14,    0,  217,    2, 0x06 /* Public */,
+       1,    2,  204,    2, 0x06 /* Public */,
+       5,    1,  209,    2, 0x06 /* Public */,
+       7,    2,  212,    2, 0x06 /* Public */,
+      10,    1,  217,    2, 0x06 /* Public */,
+      12,    0,  220,    2, 0x06 /* Public */,
+      13,    0,  221,    2, 0x06 /* Public */,
+      14,    0,  222,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      15,    0,  218,    2, 0x0a /* Public */,
-      16,    1,  219,    2, 0x0a /* Public */,
-      18,    2,  222,    2, 0x0a /* Public */,
-      21,    0,  227,    2, 0x0a /* Public */,
-      22,    0,  228,    2, 0x0a /* Public */,
-      23,    0,  229,    2, 0x0a /* Public */,
-      24,    0,  230,    2, 0x0a /* Public */,
-      25,    0,  231,    2, 0x0a /* Public */,
-      26,    0,  232,    2, 0x0a /* Public */,
-      27,    0,  233,    2, 0x0a /* Public */,
-      28,    0,  234,    2, 0x0a /* Public */,
-      29,    1,  235,    2, 0x0a /* Public */,
-      30,    0,  238,    2, 0x0a /* Public */,
-      31,    0,  239,    2, 0x0a /* Public */,
-      32,    0,  240,    2, 0x0a /* Public */,
-      33,    0,  241,    2, 0x0a /* Public */,
-      34,    0,  242,    2, 0x0a /* Public */,
-      35,    0,  243,    2, 0x0a /* Public */,
-      36,    1,  244,    2, 0x0a /* Public */,
-      37,    1,  247,    2, 0x0a /* Public */,
-      38,    2,  250,    2, 0x0a /* Public */,
-      39,    2,  255,    2, 0x0a /* Public */,
-      40,    0,  260,    2, 0x0a /* Public */,
-      41,    0,  261,    2, 0x0a /* Public */,
-      42,    0,  262,    2, 0x0a /* Public */,
-      43,    0,  263,    2, 0x0a /* Public */,
-      44,    0,  264,    2, 0x0a /* Public */,
-      45,    1,  265,    2, 0x0a /* Public */,
-      47,    0,  268,    2, 0x0a /* Public */,
-      48,    0,  269,    2, 0x0a /* Public */,
+      15,    0,  223,    2, 0x0a /* Public */,
+      16,    1,  224,    2, 0x0a /* Public */,
+      18,    2,  227,    2, 0x0a /* Public */,
+      21,    0,  232,    2, 0x0a /* Public */,
+      22,    0,  233,    2, 0x0a /* Public */,
+      23,    0,  234,    2, 0x0a /* Public */,
+      24,    0,  235,    2, 0x0a /* Public */,
+      25,    0,  236,    2, 0x0a /* Public */,
+      26,    0,  237,    2, 0x0a /* Public */,
+      27,    0,  238,    2, 0x0a /* Public */,
+      28,    0,  239,    2, 0x0a /* Public */,
+      29,    1,  240,    2, 0x0a /* Public */,
+      30,    0,  243,    2, 0x0a /* Public */,
+      31,    0,  244,    2, 0x0a /* Public */,
+      32,    0,  245,    2, 0x0a /* Public */,
+      33,    0,  246,    2, 0x0a /* Public */,
+      34,    0,  247,    2, 0x0a /* Public */,
+      35,    0,  248,    2, 0x0a /* Public */,
+      36,    0,  249,    2, 0x0a /* Public */,
+      37,    1,  250,    2, 0x0a /* Public */,
+      38,    1,  253,    2, 0x0a /* Public */,
+      39,    2,  256,    2, 0x0a /* Public */,
+      40,    2,  261,    2, 0x0a /* Public */,
+      41,    0,  266,    2, 0x0a /* Public */,
+      42,    0,  267,    2, 0x0a /* Public */,
+      43,    0,  268,    2, 0x0a /* Public */,
+      44,    0,  269,    2, 0x0a /* Public */,
+      45,    0,  270,    2, 0x0a /* Public */,
+      46,    1,  271,    2, 0x0a /* Public */,
+      48,    0,  274,    2, 0x0a /* Public */,
+      49,    0,  275,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
@@ -176,6 +178,7 @@ static const uint qt_meta_data_OSPMainDialog[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,    6,
     QMetaType::Void, QMetaType::QString,   11,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    8,    9,
@@ -185,7 +188,7 @@ static const uint qt_meta_data_OSPMainDialog[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   46,
+    QMetaType::Void, QMetaType::Int,   47,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -217,24 +220,25 @@ void OSPMainDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 16: _t->leftPressed(); break;
         case 17: _t->laserToggled(); break;
         case 18: _t->setIntensity((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 19: _t->setReference(); break;
-        case 20: _t->goTo(); break;
-        case 21: _t->openScript(); break;
-        case 22: _t->saveScript(); break;
-        case 23: _t->execScript(); break;
-        case 24: _t->compileScript(); break;
-        case 25: _t->laser((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 26: _t->playAudio((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 27: _t->waitforsec((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 28: _t->move((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
-        case 29: _t->gt(); break;
-        case 30: _t->pl(); break;
-        case 31: _t->lo(); break;
-        case 32: _t->wt(); break;
-        case 33: _t->reset(); break;
-        case 34: _t->setVolume((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 35: _t->playClicked(); break;
-        case 36: _t->stopClick(); break;
+        case 19: _t->adjToggled(); break;
+        case 20: _t->setReference(); break;
+        case 21: _t->goTo(); break;
+        case 22: _t->openScript(); break;
+        case 23: _t->saveScript(); break;
+        case 24: _t->execScript(); break;
+        case 25: _t->compileScript(); break;
+        case 26: _t->laser((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 27: _t->playAudio((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 28: _t->waitforsec((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 29: _t->move((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 30: _t->gt(); break;
+        case 31: _t->pl(); break;
+        case 32: _t->lo(); break;
+        case 33: _t->wt(); break;
+        case 34: _t->reset(); break;
+        case 35: _t->setVolume((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 36: _t->playClicked(); break;
+        case 37: _t->stopClick(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -317,13 +321,13 @@ int OSPMainDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 37)
+        if (_id < 38)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 37;
+        _id -= 38;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 37)
+        if (_id < 38)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 37;
+        _id -= 38;
     }
     return _id;
 }

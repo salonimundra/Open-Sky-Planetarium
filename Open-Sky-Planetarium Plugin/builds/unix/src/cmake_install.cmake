@@ -1,4 +1,4 @@
-# Install script for directory: /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src
+# Install script for directory: /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

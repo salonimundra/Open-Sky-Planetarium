@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -56,15 +57,19 @@ public:
     QSpacerItem *horizontalSpacer;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *reset;
-    QGroupBox *groupBox;
-    QHBoxLayout *horizontalLayout_2;
-    QSlider *intensity;
+    QGroupBox *MotorSwitchingControl;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_6;
+    QRadioButton *CoarseAdj;
+    QRadioButton *FineAdj;
+    QSpacerItem *horizontalSpacer_5;
     QGroupBox *laserlightControl;
-    QHBoxLayout *horizontalLayout_3;
+    QFormLayout *formLayout;
     QSpacerItem *horizontalSpacer_3;
     QRadioButton *laserOn;
     QRadioButton *laserOff;
     QSpacerItem *horizontalSpacer_4;
+    QSlider *intensity;
     QVBoxLayout *verticalLayout_6;
     QGroupBox *configDevice;
     QVBoxLayout *verticalLayout_5;
@@ -79,10 +84,10 @@ public:
     QVBoxLayout *verticalLayout_2;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label;
-    QLabel *label_2;
+    QLabel *X;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_3;
-    QLabel *label_4;
+    QLabel *Y;
     QWidget *scriptTab;
     QSplitter *splitter;
     QSlider *volumeChanged;
@@ -107,7 +112,7 @@ public:
     {
         if (OSPMainDialog->objectName().isEmpty())
             OSPMainDialog->setObjectName(QStringLiteral("OSPMainDialog"));
-        OSPMainDialog->resize(510, 444);
+        OSPMainDialog->resize(510, 461);
         OSPMainDialog->setFocusPolicy(Qt::ClickFocus);
         verticalLayout = new QVBoxLayout(OSPMainDialog);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -208,34 +213,45 @@ public:
 
         verticalLayout_8->addWidget(laserDirControl);
 
-        groupBox = new QGroupBox(calTab);
-        groupBox->setObjectName(QStringLiteral("groupBox"));
-        horizontalLayout_2 = new QHBoxLayout(groupBox);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        intensity = new QSlider(groupBox);
-        intensity->setObjectName(QStringLiteral("intensity"));
-        intensity->setEnabled(false);
-        intensity->setMinimum(50);
-        intensity->setMaximum(255);
-        intensity->setValue(50);
-        intensity->setSliderPosition(50);
-        intensity->setTracking(false);
-        intensity->setOrientation(Qt::Horizontal);
+        MotorSwitchingControl = new QGroupBox(calTab);
+        MotorSwitchingControl->setObjectName(QStringLiteral("MotorSwitchingControl"));
+        horizontalLayout = new QHBoxLayout(MotorSwitchingControl);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_6 = new QSpacerItem(46, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addWidget(intensity);
+        horizontalLayout->addItem(horizontalSpacer_6);
+
+        CoarseAdj = new QRadioButton(MotorSwitchingControl);
+        CoarseAdj->setObjectName(QStringLiteral("CoarseAdj"));
+        CoarseAdj->setEnabled(false);
+        CoarseAdj->setFocusPolicy(Qt::StrongFocus);
+        CoarseAdj->setChecked(false);
+
+        horizontalLayout->addWidget(CoarseAdj);
+
+        FineAdj = new QRadioButton(MotorSwitchingControl);
+        FineAdj->setObjectName(QStringLiteral("FineAdj"));
+        FineAdj->setEnabled(false);
+        FineAdj->setChecked(true);
+
+        horizontalLayout->addWidget(FineAdj);
+
+        horizontalSpacer_5 = new QSpacerItem(45, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_5);
 
 
-        verticalLayout_8->addWidget(groupBox);
+        verticalLayout_8->addWidget(MotorSwitchingControl);
 
         laserlightControl = new QGroupBox(calTab);
         laserlightControl->setObjectName(QStringLiteral("laserlightControl"));
         laserlightControl->setContextMenuPolicy(Qt::PreventContextMenu);
         laserlightControl->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
-        horizontalLayout_3 = new QHBoxLayout(laserlightControl);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        formLayout = new QFormLayout(laserlightControl);
+        formLayout->setObjectName(QStringLiteral("formLayout"));
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_3);
+        formLayout->setItem(0, QFormLayout::LabelRole, horizontalSpacer_3);
 
         laserOn = new QRadioButton(laserlightControl);
         buttonGroup = new QButtonGroup(OSPMainDialog);
@@ -246,7 +262,7 @@ public:
         laserOn->setFocusPolicy(Qt::StrongFocus);
         laserOn->setChecked(false);
 
-        horizontalLayout_3->addWidget(laserOn);
+        formLayout->setWidget(0, QFormLayout::FieldRole, laserOn);
 
         laserOff = new QRadioButton(laserlightControl);
         buttonGroup->addButton(laserOff);
@@ -254,11 +270,23 @@ public:
         laserOff->setEnabled(false);
         laserOff->setChecked(true);
 
-        horizontalLayout_3->addWidget(laserOff);
+        formLayout->setWidget(2, QFormLayout::FieldRole, laserOff);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_4);
+        formLayout->setItem(3, QFormLayout::FieldRole, horizontalSpacer_4);
+
+        intensity = new QSlider(laserlightControl);
+        intensity->setObjectName(QStringLiteral("intensity"));
+        intensity->setEnabled(false);
+        intensity->setMinimum(50);
+        intensity->setMaximum(255);
+        intensity->setValue(50);
+        intensity->setSliderPosition(50);
+        intensity->setTracking(false);
+        intensity->setOrientation(Qt::Horizontal);
+
+        formLayout->setWidget(4, QFormLayout::SpanningRole, intensity);
 
 
         verticalLayout_8->addWidget(laserlightControl);
@@ -325,10 +353,10 @@ public:
 
         horizontalLayout_5->addWidget(label);
 
-        label_2 = new QLabel(groupBox_2);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        X = new QLabel(groupBox_2);
+        X->setObjectName(QStringLiteral("X"));
 
-        horizontalLayout_5->addWidget(label_2);
+        horizontalLayout_5->addWidget(X);
 
 
         verticalLayout_2->addLayout(horizontalLayout_5);
@@ -340,10 +368,10 @@ public:
 
         horizontalLayout_6->addWidget(label_3);
 
-        label_4 = new QLabel(groupBox_2);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        Y = new QLabel(groupBox_2);
+        Y->setObjectName(QStringLiteral("Y"));
 
-        horizontalLayout_6->addWidget(label_4);
+        horizontalLayout_6->addWidget(Y);
 
 
         verticalLayout_2->addLayout(horizontalLayout_6);
@@ -445,28 +473,90 @@ public:
         OSPMainDialog->setWindowTitle(QApplication::translate("OSPMainDialog", "Form", Q_NULLPTR));
         stelWindowTitle->setText(QApplication::translate("OSPMainDialog", "Open Sky Planetarium", Q_NULLPTR));
         closeStelWindow->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        laserDirControl->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
         laserDirControl->setTitle(QApplication::translate("OSPMainDialog", "LASER Direction Control", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        mvDown->setToolTip(QApplication::translate("OSPMainDialog", "Makes the LASER move downward only if it is not at (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         mvDown->setText(QApplication::translate("OSPMainDialog", "down", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        mvUp->setToolTip(QApplication::translate("OSPMainDialog", "Makes the LASER move upwards upto 90 degrees from (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         mvUp->setText(QApplication::translate("OSPMainDialog", "up", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        mvRight->setToolTip(QApplication::translate("OSPMainDialog", "Makes the LASER move rightwards upto 360 degrees from (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         mvRight->setText(QApplication::translate("OSPMainDialog", "right", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        mvLeft->setToolTip(QApplication::translate("OSPMainDialog", "Makes the LASER move leftwards only if it is not at (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         mvLeft->setText(QApplication::translate("OSPMainDialog", "left", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        reset->setToolTip(QApplication::translate("OSPMainDialog", "Takes the LASER to (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         reset->setText(QApplication::translate("OSPMainDialog", "reset", Q_NULLPTR));
-        groupBox->setTitle(QApplication::translate("OSPMainDialog", "LASER Intensity Control", Q_NULLPTR));
-        laserlightControl->setTitle(QApplication::translate("OSPMainDialog", "LASER Switching Control", Q_NULLPTR));
+        MotorSwitchingControl->setTitle(QApplication::translate("OSPMainDialog", "Motor Speed Control", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        CoarseAdj->setToolTip(QApplication::translate("OSPMainDialog", "Makes the movement of LASER fast during its direction control.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        CoarseAdj->setText(QApplication::translate("OSPMainDialog", "Coarse", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        FineAdj->setToolTip(QApplication::translate("OSPMainDialog", "Makes the movement of LASER slow during its direction control. ", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        FineAdj->setText(QApplication::translate("OSPMainDialog", "Fine", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        laserlightControl->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
+        laserlightControl->setTitle(QApplication::translate("OSPMainDialog", "LASER  Light Control", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        laserOn->setToolTip(QApplication::translate("OSPMainDialog", "Turns the LASER on and enables slider to control intensity.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         laserOn->setText(QApplication::translate("OSPMainDialog", "Turn ON", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        laserOff->setToolTip(QApplication::translate("OSPMainDialog", "Turns the LASER off and sends the slider to its initial position. ", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         laserOff->setText(QApplication::translate("OSPMainDialog", "Turn OFF", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        intensity->setToolTip(QApplication::translate("OSPMainDialog", "Controls the intensity of LASER. Drag the slider to change the intensity.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         configDevice->setTitle(QApplication::translate("OSPMainDialog", "Device Configuration", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        selectDev->setToolTip(QApplication::translate("OSPMainDialog", "Selects the connected device.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         selectDev->setText(QApplication::translate("OSPMainDialog", "Select", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        startCal->setToolTip(QApplication::translate("OSPMainDialog", "Initializes calibration using 2 or 3 reference stars. Also, it sets the current position of LASER as (0,0).", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         startCal->setText(QApplication::translate("OSPMainDialog", "Start Calibrate", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        goTo->setToolTip(QApplication::translate("OSPMainDialog", "Takes the LASER to selected star after calibration has been accomplished.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         goTo->setText(QApplication::translate("OSPMainDialog", "GoTo", Q_NULLPTR));
         refStatus->setTitle(QApplication::translate("OSPMainDialog", "Reference Status", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        setRef->setToolTip(QApplication::translate("OSPMainDialog", "Sets reference when a star is selected. It is disabled when three references have been set successfully.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         setRef->setText(QApplication::translate("OSPMainDialog", "Set Ref.", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        refStat->setToolTip(QApplication::translate("OSPMainDialog", "Displays the number of references set.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         refStat->setText(QApplication::translate("OSPMainDialog", "0/3", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        groupBox_2->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
         groupBox_2->setTitle(QApplication::translate("OSPMainDialog", "Current Coordinates", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        label->setToolTip(QApplication::translate("OSPMainDialog", "Displays the current horizontal position of LASER in degrees. ", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         label->setText(QApplication::translate("OSPMainDialog", "X:", Q_NULLPTR));
-        label_2->setText(QString());
+        X->setText(QString());
+#ifndef QT_NO_TOOLTIP
+        label_3->setToolTip(QApplication::translate("OSPMainDialog", "Displays the current vertical position of LASER in degrees.", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
         label_3->setText(QApplication::translate("OSPMainDialog", "Y:", Q_NULLPTR));
-        label_4->setText(QString());
+        Y->setText(QString());
         tabWidg->setTabText(tabWidg->indexOf(calTab), QApplication::translate("OSPMainDialog", "Calibration", Q_NULLPTR));
         playui->setText(QApplication::translate("OSPMainDialog", "Play", Q_NULLPTR));
         stopui->setText(QApplication::translate("OSPMainDialog", "Stop", Q_NULLPTR));
@@ -487,12 +577,12 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; "
-                        "margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">An Open Source Initiative by IIT Bombay to bring interesting objects in the OpenSky closer to the common masses and school childrens.</span></p>\n"
+                        "margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">An Open Source Initiative by IIT Bombay to bring interesting objects in the Open Sky closer to the common masses and school childrens.</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;\"><br /></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">Contact: IIT Bombay</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-"
-                        "indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">Email: openskyplanetarium@fossee.in</span></p></body></html>", Q_NULLPTR));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text"
+                        "-indent:0px;\"><span style=\" font-family:'Sans Serif'; font-size:9pt;\">Email: openskyplanetarium@fossee.in</span></p></body></html>", Q_NULLPTR));
         tabWidg->setTabText(tabWidg->indexOf(abtTab), QApplication::translate("OSPMainDialog", "About", Q_NULLPTR));
     } // retranslateUi
 

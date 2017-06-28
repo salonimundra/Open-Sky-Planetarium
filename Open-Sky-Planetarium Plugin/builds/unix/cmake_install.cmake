@@ -1,4 +1,4 @@
-# Install script for directory: /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full
+# Install script for directory: /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,12 +33,12 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/modules/OpenSkyPlanetarium" TYPE FILE FILES "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/libOpenSkyPlanetarium.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/modules/OpenSkyPlanetarium" TYPE FILE FILES "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/libOpenSkyPlanetarium.so")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/cmake_install.cmake")
+  include("/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/cmake_install.cmake")
 
 endif()
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -78,35 +78,35 @@ QMediaPlaylist
 QAbstractSlider
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/OpenSkyPlanetarium-static_automoc.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/OpenSkyPlanetarium-static_automoc.cpp
 moc_LaserDev.cpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_LaserDev.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_LaserDev.cpp
 moc_OpenSkyPlanetarium.cpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_OpenSkyPlanetarium.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_OpenSkyPlanetarium.cpp
 moc_SerialCom.cpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_SerialCom.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_SerialCom.cpp
 moc_OSPMainDialog.cpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_OSPMainDialog.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_OSPMainDialog.cpp
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_LaserDev.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_LaserDev.cpp
 ../../../src/LaserDev.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/LaserDev.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/LaserDev.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_OSPMainDialog.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_OSPMainDialog.cpp
 ../../../src/gui/OSPMainDialog.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/OSPMainDialog.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/OSPMainDialog.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_OpenSkyPlanetarium.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_OpenSkyPlanetarium.cpp
 ../../../src/OpenSkyPlanetarium.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/OpenSkyPlanetarium.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/OpenSkyPlanetarium.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
@@ -114,19 +114,19 @@ QtCore/qmetatype.h
 QtCore/qplugin.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/moc_SerialCom.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/moc_SerialCom.cpp
 ../../../src/SerialCom.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.hpp
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/qrc_OpenSkyPlanetarium.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/qrc_OpenSkyPlanetarium.cpp
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/Calibrate.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/Calibrate.cpp
 Calibrate.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/Calibrate.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/Calibrate.hpp
 QMediaPlayer
 -
 QCompleter
@@ -174,13 +174,13 @@ QCoreApplication
 stdio.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/Calibrate.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/Calibrate.hpp
 math.h
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/LaserDev.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/LaserDev.cpp
 LaserDev.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/LaserDev.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/LaserDev.hpp
 QtSerialPort/QSerialPortInfo
 -
 QtSerialPort/QSerialPort
@@ -202,9 +202,9 @@ QDateTime
 QMessageBox
 -
 SerialCom.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.hpp
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/LaserDev.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/LaserDev.hpp
 QtSerialPort/QSerialPortInfo
 -
 QtSerialPort/QSerialPort
@@ -222,25 +222,25 @@ QThread
 QTime
 -
 SerialCom.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.hpp
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/OpenSkyPlanetarium.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/OpenSkyPlanetarium.cpp
 StelApp.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelApp.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelApp.hpp
 StelCore.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelCore.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelCore.hpp
 StelLocaleMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelLocaleMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelLocaleMgr.hpp
 StelModuleMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelModuleMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelModuleMgr.hpp
 StelGui.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelGui.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelGui.hpp
 StelGuiItems.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelGuiItems.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelGuiItems.hpp
 OpenSkyPlanetarium.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/OpenSkyPlanetarium.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/OpenSkyPlanetarium.hpp
 OSPMainDialog.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/OSPMainDialog.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/OSPMainDialog.hpp
 QAction
 -
 QString
@@ -250,11 +250,11 @@ QDebug
 stdexcept
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/OpenSkyPlanetarium.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/OpenSkyPlanetarium.hpp
 StelModule.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelModule.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelModule.hpp
 StelGui.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelGui.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelGui.hpp
 QString
 -
 QFont
@@ -262,17 +262,17 @@ QFont
 QObject
 -
 StelPluginInterface.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/StelPluginInterface.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/StelPluginInterface.hpp
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.cpp
 SerialCom.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.hpp
 QtSerialPort/QSerialPort
 -
 QTime
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/SerialCom.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/SerialCom.hpp
 QThread
 -
 QMutex
@@ -280,35 +280,35 @@ QMutex
 QWaitCondition
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/OSPMainDialog.cpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/OSPMainDialog.cpp
 OpenSkyPlanetarium.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/OpenSkyPlanetarium.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/OpenSkyPlanetarium.hpp
 OSPMainDialog.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/OSPMainDialog.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/OSPMainDialog.hpp
 ui_OSPMainDialog.h
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/ui_OSPMainDialog.h
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/ui_OSPMainDialog.h
 Calibrate.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/Calibrate.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/Calibrate.hpp
 StelApp.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelApp.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelApp.hpp
 StelLocaleMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelLocaleMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelLocaleMgr.hpp
 StelModule.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelModule.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelModule.hpp
 StelModuleMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelModuleMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelModuleMgr.hpp
 StelObjectMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelObjectMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelObjectMgr.hpp
 StelUtils.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelUtils.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelUtils.hpp
 StelFileMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelFileMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelFileMgr.hpp
 StarMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StarMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StarMgr.hpp
 StelAudioMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelAudioMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelAudioMgr.hpp
 StelObjectMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelObjectMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelObjectMgr.hpp
 QMediaPlayer
 -
 QCompleter
@@ -338,15 +338,15 @@ QDateTime
 QCoreApplication
 -
 
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/OSPMainDialog.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/OSPMainDialog.hpp
 Calibrate.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/Calibrate.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/Calibrate.hpp
 StelDialog.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StelDialog.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StelDialog.hpp
 LaserDev.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/LaserDev.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/LaserDev.hpp
 StarMgr.hpp
-/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src/gui/StarMgr.hpp
+/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src/gui/StarMgr.hpp
 QMediaPlayer
 -
 QWidget
@@ -2336,6 +2336,10 @@ qcompleter.h
 qfiledialog.h
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qfiledialog.h
 
+/home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QFormLayout
+qformlayout.h
+/home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qformlayout.h
+
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QFrame
 qframe.h
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qframe.h
@@ -2383,6 +2387,10 @@ qinputdialog.h
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLabel
 qlabel.h
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h
+
+/home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLayout
+qlayout.h
+/home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qlayout.h
 
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/QLineEdit
 qlineedit.h
@@ -2548,6 +2556,10 @@ QtCore/qstring.h
 QtCore/qurl.h
 -
 QtWidgets/qdialog.h
+-
+
+/home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qformlayout.h
+QtWidgets/QLayout
 -
 
 /home/sudhakar/Qt/5.7/gcc_64/include/QtWidgets/qframe.h
@@ -2812,6 +2824,8 @@ QtWidgets/QAction
 QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
+-
+QtWidgets/QFormLayout
 -
 QtWidgets/QGridLayout
 -

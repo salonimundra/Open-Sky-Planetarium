@@ -120,6 +120,9 @@ public slots:
           /**
           *    This function is connected to the laser intensity control slider
           */
+
+        void adjToggled();
+
 	void setReference();
 
 	/**
@@ -236,6 +239,8 @@ private:
 	Ui_OSPMainDialog *ui;
 	LaserDev device;
 	Calibrate calib;
+        QString acTemp;
+        QString altTemp;
 	double osp_time;
 	double osp_ra;
 	double osp_dec;

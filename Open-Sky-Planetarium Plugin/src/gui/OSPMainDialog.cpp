@@ -115,7 +115,8 @@ void OSPMainDialog :: setSignals(){
 	connect(ui->mvDown,SIGNAL(released()),this,SLOT(arrow_released()));
 	connect(ui->mvRight,SIGNAL(released()),this,SLOT(arrow_released()));
 	connect(ui->mvLeft,SIGNAL(released()),this,SLOT(arrow_released()));
-    connect(ui->reset,SIGNAL(clicked()),this,SLOT(reset()));
+        connect(ui->reset,SIGNAL(clicked()),this,SLOT(reset()));
+
 	//Connecting LaserDev signals to their respective slots
 	connect(&device,SIGNAL(debug_send(QString)),this,SLOT(debug_received(QString)));
 	connect(&device,SIGNAL(pos_received(QString,QString)),this,SLOT(pos_received(QString,QString)));
@@ -128,6 +129,10 @@ void OSPMainDialog :: setSignals(){
 	connect(ui->laserOn,SIGNAL(clicked()),this,SLOT(laserToggled()));
 	connect(ui->laserOff,SIGNAL(clicked()),this,SLOT(laserToggled()));
         connect(ui->intensity,SIGNAL(valueChanged(int)),this,SLOT(setIntensity(int)));
+
+        // Motor speed control
+        connect(ui->CoarseAdj,SIGNAL(clicked()),this,SLOT(adjToggled()));
+        connect(ui->FineAdj,SIGNAL(clicked()),this,SLOT(adjToggled()));
 
 	//setReference and goTo button
 	connect(ui->setRef,SIGNAL(clicked()),this,SLOT(setReference()));
@@ -152,12 +157,12 @@ void OSPMainDialog :: setSignals(){
 	connect(this,SIGNAL(comWAIT(int,int)),this,SLOT(waitforsec(int,int)));
 	
 	//Signals for audio 
-    connect(ui->playui,SIGNAL(clicked()),this,SLOT(playClicked()));
-    connect(ui->stopui,SIGNAL(clicked()),this,SLOT(stopClick()));
-    connect(ui->volumeChanged,SIGNAL(sliderMoved(int)),this,SLOT(setVolume(int)));
-    connect(this,SIGNAL(play()),player,SLOT(play()));
-    connect(this,SIGNAL(pause()),player,SLOT(pause()));
-    connect(this,SIGNAL(stop()),player,SLOT(stop()));
+        connect(ui->playui,SIGNAL(clicked()),this,SLOT(playClicked()));
+        connect(ui->stopui,SIGNAL(clicked()),this,SLOT(stopClick()));
+        connect(ui->volumeChanged,SIGNAL(sliderMoved(int)),this,SLOT(setVolume(int)));
+        connect(this,SIGNAL(play()),player,SLOT(play()));
+        connect(this,SIGNAL(pause()),player,SLOT(pause()));
+        connect(this,SIGNAL(stop()),player,SLOT(stop()));
 }
 
 
@@ -183,33 +188,15 @@ pos_received():
 */
 void OSPMainDialog :: pos_received(QString x,QString y){
 	qDebug() << "Printing X and Y = ["<<x <<","<<y<<"]";
-	double ac = x.toDouble();
-	double alt = y.toDouble();
-	switch(nRef){
-		case 1:
-			calib.setRef_1(osp_ra,osp_dec,osp_time,ac,alt);
-                        showMessage(QString("First reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
-			break;
-		case 2:
-			calib.setRef_2(osp_ra,osp_dec,osp_time,ac,alt);
-			ui->goTo->setEnabled(true);
-			ui->execScript->setEnabled(true);
-                        showMessage(QString("Second reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
-           		//showMessage("Second reference point has been set");
-			break;
-		case 3:
-			calib.setRef_3(osp_ra,osp_dec,osp_time,ac,alt);
-			ui->setRef->setEnabled(false);
-			ui->goTo->setEnabled(true);
-			ui->execScript->setEnabled(true);
-                        ui->mvDown->setEnabled(false);
-                        ui->mvUp->setEnabled(false);
-                        ui->mvRight->setEnabled(false);
-                        ui->mvLeft->setEnabled(false);
-                        showMessage(QString("Third reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
-            		//showMessage("Third reference point has been set");
-			break;
-	}
+            acTemp = x;
+            altTemp = y;
+            double l=x.toDouble()*(180.0/3.14159);
+            double m=y.toDouble()*(180.0/3.14159);
+            QString s=QString::number(l);
+            QString t=QString::number(m);
+            ui->X->setText(s);
+            ui->Y->setText(t);
+
 }
 
 /*
@@ -244,6 +231,7 @@ void OSPMainDialog :: initDevice(){
                 ui->mvLeft->setEnabled(true);
                 ui->mvDown->setEnabled(true);
                 ui->mvRight->setEnabled(true);
+                ui->reset->setEnabled(true);
 		ui->refStat->setText("0/3");
 }
 
@@ -262,18 +250,20 @@ void OSPMainDialog :: selectDevice(){
     	portName = QInputDialog::getItem(NULL, "Open Sky Planetarium","Select Device:",itemsList, 0, false, &ok);
 	device.setPortName(portName);
     	if (ok && !portName.isEmpty()){
-		ui->mvUp->setEnabled(true);
-		ui->mvDown->setEnabled(true);
-		ui->mvRight->setEnabled(true);
-		ui->mvLeft->setEnabled(true);
+        ui->mvUp->setEnabled(false);
+        ui->mvDown->setEnabled(false);
+        ui->mvRight->setEnabled(false);
+        ui->mvLeft->setEnabled(false);
 		ui->selectDev->setEnabled(true);
 		ui->startCal->setEnabled(true);
-                ui->reset->setEnabled(true);
+        ui->reset->setEnabled(false);
 		ui->setRef->setEnabled(false);
 		ui->goTo->setEnabled(false);
 		ui->execScript->setEnabled(true);     //change after testing to false
 		ui->laserOn->setEnabled(true);
 		ui->laserOff->setEnabled(true);
+        ui->CoarseAdj->setEnabled(true);
+        ui->FineAdj->setEnabled(true);
 		ui->refStat->setText("0/3");
 	}
 	else{
@@ -314,6 +304,9 @@ void OSPMainDialog :: leftPressed(){
 void OSPMainDialog ::reset(){
     //this->initDevice();
     device.resetAll();
+    QString val="0.000000";
+        ui->X->setText(val);
+        ui->Y->setText(val);
 }
 
 
@@ -345,6 +338,21 @@ void OSPMainDialog :: setIntensity(int x){
     qDebug() << "[OpenSkyPlanetarium]:Changing intensity" << endl;
 }
 
+/*
+adjToggled():
+    this slot is connected to the motor speed control radio buttons of the gui
+*/
+void OSPMainDialog :: adjToggled(){
+        if (ui->CoarseAdj->isChecked()){
+            device.CoarseAdj();
+            qDebug() << "[OpenSkyPlanetarium]:High Speed ON" << endl;
+        }
+        else{
+            device.FineAdj();
+            qDebug() << "[OpenSkyPlanetarium]:Low Speed ON" << endl;
+        }
+}
+
 
 /*
 setReference():
@@ -353,30 +361,68 @@ setReference():
 */
 
 void OSPMainDialog :: setReference(){
-	nRef++;
-	QString sRef;
-	double dec = 0,ra = 0;
-	QDateTime dt = QDateTime::currentDateTime();
-	double time = StelUtils::hmsToRad (dt.time().hour(), dt.time().minute(), dt.time().second());
-	const QList<StelObjectP>& selected = GETSTELMODULE(StelObjectMgr)->getSelectedObject();
-    if(nRef>3)
-    {
-        nRef=3;
-	ui->setRef->setEnabled(false);
-    }
-    if (!selected.isEmpty()) {
-		StelUtils::rectToSphe(&ra,&dec,selected[0]->getEquinoxEquatorialPos(StelApp::getInstance().getCore()));
-                osp_ra=ra - 3.14159;
-		osp_dec=dec;
-		osp_time=time;
-		qDebug() << "Star = ["<<osp_time <<"," <<osp_ra <<"," <<osp_dec<<"]";
-		device.getPos();
-		sRef.setNum(nRef);
-		ui->refStat->setText(sRef+"/3");
-	}
-	else{
-		showMessage("Please select a star to set as a Reference");
-	}
+        nRef++;
+        QString sRef;
+        double dec = 0,ra = 0;
+        QDateTime dt = QDateTime::currentDateTime();
+        double time = StelUtils::hmsToRad (dt.time().hour(), dt.time().minute(), dt.time().second());
+        const QList<StelObjectP>& selected = GETSTELMODULE(StelObjectMgr)->getSelectedObject();
+        if(nRef>3)
+        {
+            nRef=3;
+        ui->setRef->setEnabled(false);
+        }
+        if (!selected.isEmpty()) {
+            StelUtils::rectToSphe(&ra,&dec,selected[0]->getEquinoxEquatorialPos(StelApp::getInstance().getCore()));
+            osp_ra=ra - 3.14159;
+            osp_dec=dec;
+            osp_time=time;
+            qDebug() << "Star = ["<<osp_time <<"," <<osp_ra <<"," <<osp_dec<<"]";
+
+            double ac,alt;
+        switch(nRef){
+            case 1:
+             device.getPos();
+             ac = acTemp.toDouble();
+             alt = altTemp.toDouble();
+                calib.setRef_1(osp_ra,osp_dec,osp_time,ac,alt);
+                            showMessage(QString("First reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
+                break;
+            case 2:
+            device.getPos();
+             ac = acTemp.toDouble();
+             alt = altTemp.toDouble();
+                calib.setRef_2(osp_ra,osp_dec,osp_time,ac,alt);
+                ui->goTo->setEnabled(true);
+                ui->execScript->setEnabled(true);
+                            showMessage(QString("Second reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
+                    //showMessage("Second reference point has been set");
+                break;
+            case 3:
+            device.getPos();
+             ac = acTemp.toDouble();
+             alt = altTemp.toDouble();
+                calib.setRef_3(osp_ra,osp_dec,osp_time,ac,alt);
+                ui->setRef->setEnabled(false);
+                ui->goTo->setEnabled(true);
+                ui->execScript->setEnabled(true);
+                            ui->mvDown->setEnabled(false);
+                            ui->mvUp->setEnabled(false);
+                            ui->mvRight->setEnabled(false);
+                            ui->mvLeft->setEnabled(false);
+                            showMessage(QString("Third reference point has been set\n az = %1; alt = %2").arg(ac).arg(alt));
+                        //showMessage("Third reference point has been set");
+                break;
+
+
+                    }
+                    sRef.setNum(nRef);
+            ui->refStat->setText(sRef+"/3");
+
+        }
+        else{
+            showMessage("Please select a star to set as a Reference");
+        }
 }
 
 /*
@@ -404,6 +450,12 @@ void OSPMainDialog :: goTo(){
 	sndec.setNum(dec);			//for testing purpose
         showMessage(QString("Old ra/dec = %1/%2 ; New ra/dec = %3/%4 ; LASER Coordinates = %5/%6").arg(sora).arg(sodec).arg(snra).arg(sndec).arg(sac).arg(salt));				//for testing purpose
 	device.move(ac,alt);
+    double xo=ac*(180.0/3.14159);
+    double yo=alt*(180.0/3.14159);
+    QString s=QString::number(xo);
+    QString t=QString::number(yo);
+        ui->X->setText(s);
+        ui->Y->setText(t);
 	qDebug() << "[goto_telescope_ac,alt]:"<<ac <<"," <<alt;
 }
 

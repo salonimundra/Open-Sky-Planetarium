@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full
+CMAKE_SOURCE_DIR = "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix
+CMAKE_BINARY_DIR = "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix"
 
 # Utility rule file for OpenSkyPlanetarium-static_automoc.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskypla
 include src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/progress.make
 
 src/CMakeFiles/OpenSkyPlanetarium-static_automoc:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target OpenSkyPlanetarium-static"
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src && /usr/bin/cmake -E cmake_autogen /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/ ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic moc for target OpenSkyPlanetarium-static"
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src" && /usr/bin/cmake -E cmake_autogen "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/" ""
 
 OpenSkyPlanetarium-static_automoc: src/CMakeFiles/OpenSkyPlanetarium-static_automoc
 OpenSkyPlanetarium-static_automoc: src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build: OpenSkyPlanetarium-s
 .PHONY : src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/build
 
 src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/clean:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src && $(CMAKE_COMMAND) -P CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/cmake_clean.cmake
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src" && $(CMAKE_COMMAND) -P CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/clean
 
 src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/depend:
-	cd /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/src /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src /home/sudhakar/Downloads/stellarium-0.15.2/plugins/Openskyplanetarium-master-full/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/src" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src" "/home/sudhakar/Downloads/stellarium-0.15.2/plugins/Open-Sky-Planetarium Plugin(with motor control)/builds/unix/src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : src/CMakeFiles/OpenSkyPlanetarium-static_automoc.dir/depend
 
