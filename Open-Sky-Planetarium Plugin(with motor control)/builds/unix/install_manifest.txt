@@ -1,0 +1,1 @@
+/home/sudhakar/.stellarium/modules/OpenSkyPlanetarium/libOpenSkyPlanetarium.so

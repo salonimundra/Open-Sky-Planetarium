@@ -1,0 +1,2161 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 0
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Open Sky Planetarium
+\end_layout
+
+\begin_layout SubTitle
+Dynamic Plugin for Stellarium
+\end_layout
+
+\begin_layout Author
+Dhiraj Salian
+\end_layout
+
+\begin_layout Section
+Building the Dynamic Plugin
+\end_layout
+
+\begin_layout Standard
+Important Links Before Proceeding:
+\end_layout
+
+\begin_layout Itemize
+http://www.stellarium.org/doc/head/
+\end_layout
+
+\begin_layout Itemize
+http://www.stellarium.org/doc/head/plugins.html
+\end_layout
+
+\begin_layout Itemize
+http://stellarium.org/wiki/index.php/Compilation_on_Linux
+\end_layout
+
+\begin_layout Itemize
+http://www.stellarium.org/wiki/index.php/Plugins
+\end_layout
+
+\begin_layout Itemize
+http://www.stellarium.org/wiki/index.php/Plugin_Development#Creating_the_plug-in_di
+rectory
+\end_layout
+
+\begin_layout Itemize
+https://answers.launchpad.net/stellarium/+question/295813
+\end_layout
+
+\begin_layout Subsection
+Steps to Build a Dynamic Plugin (as of 5th July 2016):
+\end_layout
+
+\begin_layout Itemize
+First export the environment variables as follows:
+\end_layout
+
+\begin_layout LyX-Code
+export STELROOT=/home/redcoder265/MyProjects/stellarium export QTPATH=/home/redc
+oder265/DevelopmentTools/Qt/5.7/gcc_64 export QTDIR=/home/redcoder265/Development
+Tools/Qt/5.7/gcc_64 export PATH=/home/redcoder265/DevelopmentTools/Qt/5.7/gcc_64/b
+in:$PATH export LD_LIBRARY_PATH=${QTPATH}/lib:${LD_LIBRARY_PATH} 
+\end_layout
+
+\begin_layout Itemize
+Compile the stellarium source code as given in the link - http://stellarium.org/w
+iki/index.php/Compilation_on_Linux
+\end_layout
+
+\begin_layout Itemize
+Set the environment variable STELROOT to the root of the Stellarium source
+ tree.
+ The Stellarium build directory is expected to be: 
+\end_layout
+
+\begin_layout LyX-Code
+$STELROOT/builds/unix 
+\end_layout
+
+\begin_layout Itemize
+Copy your plugin in the directory: 
+\end_layout
+
+\begin_layout LyX-Code
+$STELROOT/plugins
+\end_layout
+
+\begin_layout Itemize
+Create the folder builds/unix in your Plugin directory as follows : 
+\end_layout
+
+\begin_layout LyX-Code
+mkdir -p builds/unix 
+\end_layout
+
+\begin_layout LyX-Code
+cd builds/unix
+\end_layout
+
+\begin_layout Itemize
+Run:
+\end_layout
+
+\begin_layout LyX-Code
+cmake ../..
+\end_layout
+
+\begin_layout LyX-Code
+make
+\end_layout
+
+\begin_layout LyX-Code
+make install
+\end_layout
+
+\begin_layout Standard
+If all goes well, the relevant files should be built and copied to your
+ ~/.stellarium/modules/<your-plugin-name> directory.
+\end_layout
+
+\begin_layout Subparagraph
+Link to the OpenSkyPlanetarium repository
+\end_layout
+
+\begin_layout Standard
+https://reDcoDer265@bitbucket.org/reDcoDer265/openskyplanetarium.git
+\end_layout
+
+\begin_layout Section
+Creating a Dynamic Plugin
+\end_layout
+
+\begin_layout Subsection
+Basic Structure of a Plugin
+\end_layout
+
+\begin_layout LyX-Code
+Code:
+\end_layout
+
+\begin_layout LyX-Code
+#ifndef OPENSKYPLANETARIUM_HPP_
+\end_layout
+
+\begin_layout LyX-Code
+#define OPENSKYPLANETARIUM_HPP_
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+#include "StelModule.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include "StelGui.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include <QFont>
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+class OSPMainDialog;     //The Ui Class of Our GUI
+\end_layout
+
+\begin_layout LyX-Code
+OpenSkyPlanetarium : public StelModule
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+public:
+\end_layout
+
+\begin_layout LyX-Code
+	OpenSkyPlanetarium();
+\end_layout
+
+\begin_layout LyX-Code
+	~OpenSkyPlanetarium();
+\end_layout
+
+\begin_layout LyX-Code
+// The Methods defined below overload the methods in the StelModule class
+\end_layout
+
+\begin_layout LyX-Code
+	virtual void init();
+\end_layout
+
+\begin_layout LyX-Code
+	virtual void deinit();
+\end_layout
+
+\begin_layout LyX-Code
+	virtual void update(double) {;}
+\end_layout
+
+\begin_layout LyX-Code
+	virtual double getCallOrder(StelModuleActionName actionName) const;
+\end_layout
+
+\begin_layout LyX-Code
+	virtual bool configureGui(bool show);
+\end_layout
+
+\begin_layout LyX-Code
+private:
+\end_layout
+
+\begin_layout LyX-Code
+	QFont font;	
+\end_layout
+
+\begin_layout LyX-Code
+	OSPMainDialog *mainDialog;
+\end_layout
+
+\begin_layout LyX-Code
+	StelButton* toolbarButton;
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+#include <QObject>
+\end_layout
+
+\begin_layout LyX-Code
+#include "StelPluginInterface.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+// This class is used by Qt to manage a plug-in interface class
+\end_layout
+
+\begin_layout LyX-Code
+OpenSkyPlanetariumPluginInterface : public QObject,
+\end_layout
+
+\begin_layout LyX-Code
+									public StelPluginInterface
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+	Q_OBJECT
+\end_layout
+
+\begin_layout LyX-Code
+	Q_PLUGIN_METADATA(IID StelPluginInterface_iid)
+\end_layout
+
+\begin_layout LyX-Code
+	Q_INTERFACES(StelPluginInterface)
+\end_layout
+
+\begin_layout LyX-Code
+public:
+\end_layout
+
+\begin_layout LyX-Code
+	virtual StelModule* getStelModule() const;
+\end_layout
+
+\begin_layout LyX-Code
+	virtual StelPluginInfo getPluginInfo() const;
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\begin_layout Subsection
+Creating a ToolBar Button and connecting it to the Gui
+\end_layout
+
+\begin_layout LyX-Code
+Code:
+\end_layout
+
+\begin_layout LyX-Code
+try{
+\end_layout
+
+\begin_layout LyX-Code
+	addAction("actionShow_Main_Dialog", N_("OpenSkyPlanetarium"), N_("Show
+ Open Sky Planetarium Window"), mainDialog, "visible", "Ctrl+Shift+P");
+\end_layout
+
+\begin_layout LyX-Code
+	StelGui* gui = dynamic_cast<StelGui*>(StelApp::getInstance().getGui());
+\end_layout
+
+\begin_layout LyX-Code
+	if (gui!=NULL)
+\end_layout
+
+\begin_layout LyX-Code
+		{
+\end_layout
+
+\begin_layout LyX-Code
+			toolbarButton =	new StelButton(NULL,					                									QPixmap(":/
+OpenSkyPlanetarium/bt_osp_on.png"), 													QPixmap(":/OpenSkyPlanetarium/bt
+_osp_off.png"), 						       			 	QPixmap(":/graphicGui/glow32x32.png"),
+\end_layout
+
+\begin_layout LyX-Code
+									"actionShow_Main_Dialog");
+\end_layout
+
+\begin_layout LyX-Code
+			gui->getButtonBar()->addButton(toolbarButton, "065-pluginsGroup");
+\end_layout
+
+\begin_layout LyX-Code
+		}
+\end_layout
+
+\begin_layout LyX-Code
+	}
+\end_layout
+
+\begin_layout LyX-Code
+catch (std::runtime_error &e)
+\end_layout
+
+\begin_layout LyX-Code
+	{
+\end_layout
+
+\begin_layout LyX-Code
+		qWarning() << "[OpemSkyPlanetarium] init() error: " << e.what();
+\end_layout
+
+\begin_layout LyX-Code
+		return;
+\end_layout
+
+\begin_layout LyX-Code
+	}
+\end_layout
+
+\begin_layout Quotation
+Note : For Including the .png files , Qt Resource file also should be included
+ and the command for resources to be compiled should be included in the
+ $STELROOT/plugins/OpenSkyPlanetarium/srcCMakeLists.txt as follows
+\end_layout
+
+\begin_layout LyX-Code
+Code:
+\end_layout
+
+\begin_layout LyX-Code
+SET(OpenSkyPlanetarium_RES ../OpenSkyPlanetarium.qrc )
+\end_layout
+
+\begin_layout LyX-Code
+QT5_ADD_RESOURCES(OpenSkyPlanetarium_RES_CXX ${OpenSkyPlanetarium_RES})
+\end_layout
+
+\begin_layout Section
+Main Coding of OpenSkyPlanetarium
+\end_layout
+
+\begin_layout Subsection
+ScreenShots of the Plugin
+\end_layout
+
+\begin_layout Standard
+The plugin has 3 tabs - About ,Calibration and ScriptEngine
+\end_layout
+
+\begin_layout Standard
+About - Displays information about the plugin
+\end_layout
+
+\begin_layout Standard
+Calibration - To calibrate the device
+\end_layout
+
+\begin_layout Standard
+ScriptEngine - To write and play scripts
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/redcoder265/Pictures/Stellarium/about.png
+	width 15cm
+	height 10cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/redcoder265/Pictures/Stellarium/calibrate.png
+	width 15cm
+	height 10cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/redcoder265/Pictures/Stellarium/script.png
+	width 15cm
+	height 10cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+File Structure of Plugin
+\end_layout
+
+\begin_layout Standard
+File Structure: $STELROOT/plugins/OpenSkyPlanetarium
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+bt_osp_off.png
+\emph default
+ - toolbar icon for osp(off).
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+bt_osp_on.png
+\emph default
+ - toolbar icon for osp(on).
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+CMakeLists.txt
+\emph default
+ - used for compilation
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+OpenSkyPlanetarium.qrc
+\emph default
+ - qt resource file
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+osp-doc.lyx
+\emph default
+ - doc for writing 
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+src
+\emph default
+ - contains all the source code
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+COPYING
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+README
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+builds/
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+old_files/
+\end_layout
+
+\begin_layout Standard
+File Structure: $STELROOT/plugins/OpenSkyPlanetarium/src
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+gui/
+\emph default
+ - contains the gui file which is also main file for our plugin
+\end_layout
+
+\begin_layout Itemize
+CMakeLists.txt - used for build process
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+LaserDev.hpp/LaserDev.cpp
+\emph default
+ - for communication with the device
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Calibrate.hpp/Calibrate.cpp
+\emph default
+ - for calibration mathematics
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+SerialCom.hpp/SerialCom.cpp
+\emph default
+ - for serial communication
+\end_layout
+
+\begin_layout Standard
+File Structure: $STELROOT/plugins/OpenSkyPlanetarium/src/gui
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+OSPMainDialog.hpp/OSPMainDialog.cpp
+\emph default
+ - main class which connects ui and other classes
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+OSPMainDialog.ui
+\emph default
+ - Project's ui file
+\end_layout
+
+\begin_layout Subsection
+OSPMainDialog.ui
+\end_layout
+
+\begin_layout Standard
+The Gui file of the project.
+\end_layout
+
+\begin_layout Standard
+QtCreator is used to create the UI file.
+ The .cpp file from .ui file is created during the build process.
+ For creation of the ui files $STELROOT/plugins/OpenSkyPlanetarium/src/CMakeList
+s has to be edited accordingly.
+\end_layout
+
+\begin_layout LyX-Code
+Code:
+\end_layout
+
+\begin_layout LyX-Code
+SET(OpenSkyPlanetarium_UIS gui/OSPMainDialog.ui )
+\end_layout
+
+\begin_layout LyX-Code
+QT5_WRAP_UI(OpenSkyPlanetarium_UIS_H ${OpenSkyPlanetarium_UIS})
+\end_layout
+
+\begin_layout Subsection
+OSPMainDialog.hpp/OSPMainDialog.cpp
+\end_layout
+
+\begin_layout Standard
+This is the main file which connects other classes and the gui.
+\end_layout
+
+\begin_layout Standard
+The basic structure of the class 
+\end_layout
+
+\begin_layout LyX-Code
+Code:
+\end_layout
+
+\begin_layout LyX-Code
+#ifndef OSPMAINDIALOG_H
+\end_layout
+
+\begin_layout LyX-Code
+#define OSPMAINDIALOG_H
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+#include "Calibrate.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include "StelDialog.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include "LaserDev.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include "StarMgr.hpp"
+\end_layout
+
+\begin_layout LyX-Code
+#include<QMediaPlayer>
+\end_layout
+
+\begin_layout LyX-Code
+#include <QWidget>
+\end_layout
+
+\begin_layout LyX-Code
+#include <QtSerialPort/QSerialPort>
+\end_layout
+
+\begin_layout LyX-Code
+#include <QtSerialPort/QSerialPortInfo>
+\end_layout
+
+\begin_layout LyX-Code
+#include<QList>
+\end_layout
+
+\begin_layout LyX-Code
+#include<QHash>
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+class Ui_OSPMainDialog;
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+class OSPMainDialog : public StelDialog
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+    	Q_OBJECT
+\end_layout
+
+\begin_layout LyX-Code
+public:
+\end_layout
+
+\begin_layout LyX-Code
+    	OSPMainDialog();
+\end_layout
+
+\begin_layout LyX-Code
+    	~OSPMainDialog();
+\end_layout
+
+\begin_layout LyX-Code
+    	void setSignals();
+\end_layout
+
+\begin_layout LyX-Code
+    	void showMessage(QString m);
+\end_layout
+
+\begin_layout LyX-Code
+	
+\end_layout
+
+\begin_layout LyX-Code
+	
+\end_layout
+
+\begin_layout LyX-Code
+public slots:
+\end_layout
+
+\begin_layout LyX-Code
+    	void retranslate();
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+//Slots for the user defined signals
+\end_layout
+
+\begin_layout LyX-Code
+        void debug_received(QString s);
+\end_layout
+
+\begin_layout LyX-Code
+        void pos_received(QString x,QString y);
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+//All device related slots which are connected to buttons on the GUI   
+   
+\end_layout
+
+\begin_layout LyX-Code
+        void selectDevice();
+\end_layout
+
+\begin_layout LyX-Code
+	    void initDevice();
+\end_layout
+
+\begin_layout LyX-Code
+        void arrow_released();
+\end_layout
+
+\begin_layout LyX-Code
+        void upPressed();
+\end_layout
+
+\begin_layout LyX-Code
+        void downPressed();
+\end_layout
+
+\begin_layout LyX-Code
+        void rightPressed();
+\end_layout
+
+\begin_layout LyX-Code
+        void leftPressed();
+\end_layout
+
+\begin_layout LyX-Code
+        void laserToggled();
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+//SetReference and Goto slot for the 2 buttons setRef and goTo in GUI	
+\end_layout
+
+\begin_layout LyX-Code
+	    void setReference();
+\end_layout
+
+\begin_layout LyX-Code
+	    void goTo();
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+//Script Engine Basic slots like open file,save file,build file and build
+ + run	
+\end_layout
+
+\begin_layout LyX-Code
+    	void openScript();
+\end_layout
+
+\begin_layout LyX-Code
+    	void saveScript();
+\end_layout
+
+\begin_layout LyX-Code
+    	void execScript();
+\end_layout
+
+\begin_layout LyX-Code
+    	void compileScript();
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+//This slots are called when executing the script 
+\end_layout
+
+\begin_layout LyX-Code
+    	void laser(bool stat);
+\end_layout
+
+\begin_layout LyX-Code
+    	void playAudio(QString fname);
+\end_layout
+
+\begin_layout LyX-Code
+    	void waitforsec(int min,int sec);
+\end_layout
+
+\begin_layout LyX-Code
+    	void move(QString,QString);
+\end_layout
+
+\begin_layout LyX-Code
+	
+\end_layout
+
+\begin_layout LyX-Code
+//This slot is called for the commands button goto,wait,play and laser on/off
+ in GUI
+\end_layout
+
+\begin_layout LyX-Code
+    	void gt();
+\end_layout
+
+\begin_layout LyX-Code
+    	void pl();
+\end_layout
+
+\begin_layout LyX-Code
+    	void lo();
+\end_layout
+
+\begin_layout LyX-Code
+    	void wt();
+\end_layout
+
+\begin_layout LyX-Code
+signals:
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+//The execution of script emits these signals 
+\end_layout
+
+\begin_layout LyX-Code
+    	void comGOTO(QString sra,QString sdec);
+\end_layout
+
+\begin_layout LyX-Code
+    	void comTURN(bool stat);
+\end_layout
+
+\begin_layout LyX-Code
+    	void comWAIT(int min,int sec);
+\end_layout
+
+\begin_layout LyX-Code
+    	void comPLAY(QString fname);
+\end_layout
+
+\begin_layout LyX-Code
+        
+\end_layout
+
+\begin_layout LyX-Code
+protected:
+\end_layout
+
+\begin_layout LyX-Code
+        void createDialogContent();
+\end_layout
+
+\begin_layout LyX-Code
+private:
+\end_layout
+
+\begin_layout LyX-Code
+   	OpenSkyPlanetarium *osp;
+\end_layout
+
+\begin_layout LyX-Code
+   	Ui_OSPMainDialog *ui;
+\end_layout
+
+\begin_layout LyX-Code
+   	LaserDev device;
+\end_layout
+
+\begin_layout LyX-Code
+   	Calibrate calib;
+\end_layout
+
+\begin_layout LyX-Code
+   	double osp_time;
+\end_layout
+
+\begin_layout LyX-Code
+   	double osp_ra;
+\end_layout
+
+\begin_layout LyX-Code
+   	double osp_dec;
+\end_layout
+
+\begin_layout LyX-Code
+   	bool buildStatus;
+\end_layout
+
+\begin_layout LyX-Code
+   	QString portName;
+\end_layout
+
+\begin_layout LyX-Code
+   	QHash<QString,QString> i18n_to_coords;
+\end_layout
+
+\begin_layout LyX-Code
+   	QString moduleDirectoryPath;
+\end_layout
+
+\begin_layout LyX-Code
+   	QString scriptDirectoryPath;
+\end_layout
+
+\begin_layout LyX-Code
+   	QString audioDirectoryPath;
+\end_layout
+
+\begin_layout LyX-Code
+   	QStringList commandsList;
+\end_layout
+
+\begin_layout LyX-Code
+   	bool calMode;
+\end_layout
+
+\begin_layout LyX-Code
+   	int nRef;
+\end_layout
+
+\begin_layout LyX-Code
+   	//QMediaPlayer* player;
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\begin_layout LyX-Code
+#endif // OSPMAINDIALOG_H
+\end_layout
+
+\begin_layout Subsection
+SerialCom.hpp/SerialCom.cpp
+\end_layout
+
+\begin_layout Standard
+The serial communication has been changed many times.This blocking master
+ approach seems to be the best approach for the communication between stellarium
+ and laser device.
+\end_layout
+
+\begin_layout Standard
+The Approach was taken from the Qt Docs - http://doc.qt.io/qt-5/qtserialport-block
+ingmaster-example.html
+\end_layout
+
+\begin_layout Standard
+Code:
+\end_layout
+
+\begin_layout Standard
+#ifndef SERIALCOM_H
+\end_layout
+
+\begin_layout Standard
+#define SERIALCOM_H
+\end_layout
+
+\begin_layout Standard
+//
+\end_layout
+
+\begin_layout Standard
+#include <QThread>
+\end_layout
+
+\begin_layout Standard
+#include <QMutex>
+\end_layout
+
+\begin_layout Standard
+#include <QWaitCondition>
+\end_layout
+
+\begin_layout Standard
+//
+\end_layout
+
+\begin_layout Standard
+//
+\end_layout
+
+\begin_layout Standard
+class SerialCom : public QThread
+\end_layout
+
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+Q_OBJECT
+\end_layout
+
+\begin_layout Standard
+public:
+\end_layout
+
+\begin_layout Standard
+SerialCom(QObject *parent = 0);
+\end_layout
+
+\begin_layout Standard
+~SerialCom();
+\end_layout
+
+\begin_layout Standard
+//////////////////////////////////////////////////////////sendRequest()
+ - used to send commands to arduino/////////////////////////////////////////////
+/
+\end_layout
+
+\begin_layout Standard
+void sendRequest(const QString &port, int waitTime, const QString &request);
+\end_layout
+
+\begin_layout Standard
+//////////////////////////////////////////////////////////////////////////run()
+ - thread function//////////////////////////////////////////////////////////////
+////////////
+\end_layout
+
+\begin_layout Standard
+void run();
+\end_layout
+
+\begin_layout Standard
+signals:
+\end_layout
+
+\begin_layout Standard
+void response(const QString &s);
+\end_layout
+
+\begin_layout Standard
+void error(const QString &s);
+\end_layout
+
+\begin_layout Standard
+void timeout(const QString &s);
+\end_layout
+
+\begin_layout Standard
+private:
+\end_layout
+
+\begin_layout Standard
+QString port;
+\end_layout
+
+\begin_layout Standard
+QString request;
+\end_layout
+
+\begin_layout Standard
+int waitTime;
+\end_layout
+
+\begin_layout Standard
+QMutex mutex;
+\end_layout
+
+\begin_layout Standard
+QWaitCondition cond;
+\end_layout
+
+\begin_layout Standard
+bool quit;
+\end_layout
+
+\begin_layout Standard
+};
+\end_layout
+
+\begin_layout Standard
+#endif // SERIALCOM_H
+\end_layout
+
+\begin_layout Subsection
+LaserDev.hpp/LaserDev.cpp
+\end_layout
+
+\begin_layout Standard
+This class uses SerialCom class to send requests and get back response.
+\end_layout
+
+\begin_layout Standard
+Code:
+\end_layout
+
+\begin_layout Standard
+#ifndef LASERDEV_HPP
+\end_layout
+
+\begin_layout Standard
+#define LASERDEV_HPP
+\end_layout
+
+\begin_layout Standard
+#include <QtSerialPort/QSerialPortInfo>
+\end_layout
+
+\begin_layout Standard
+#include <QtSerialPort/QSerialPort>
+\end_layout
+
+\begin_layout Standard
+#include <QTextStream>
+\end_layout
+
+\begin_layout Standard
+#include <QCoreApplication>
+\end_layout
+
+\begin_layout Standard
+#include <QString>
+\end_layout
+
+\begin_layout Standard
+#include <QObject>
+\end_layout
+
+\begin_layout Standard
+#include <QThread>
+\end_layout
+
+\begin_layout Standard
+#include <QTime>
+\end_layout
+
+\begin_layout Standard
+#include "SerialCom.hpp"
+\end_layout
+
+\begin_layout Standard
+class LaserDev : public QObject
+\end_layout
+
+\begin_layout Standard
+{
+\end_layout
+
+\begin_layout Standard
+Q_OBJECT
+\end_layout
+
+\begin_layout Standard
+public:
+\end_layout
+
+\begin_layout Standard
+LaserDev(QObject *parent=0);
+\end_layout
+
+\begin_layout Standard
+~LaserDev();
+\end_layout
+
+\begin_layout Standard
+void setPortName(const QString &s); //Sets Portname for Serial Communication
+\end_layout
+
+\begin_layout Standard
+signals:
+\end_layout
+
+\begin_layout Standard
+void debug_send(QString s);
+\end_layout
+
+\begin_layout Standard
+void pos_received(QString,QString);
+\end_layout
+
+\begin_layout Standard
+private:
+\end_layout
+
+\begin_layout Standard
+int move_count;
+\end_layout
+
+\begin_layout Standard
+QString ac,alt,comm;
+\end_layout
+
+\begin_layout Standard
+SerialCom thread;
+\end_layout
+
+\begin_layout Standard
+QString osp_serialPort;
+\end_layout
+
+\begin_layout Standard
+QByteArray osp_ba;
+\end_layout
+
+\begin_layout Standard
+public slots:
+\end_layout
+
+\begin_layout Standard
+void getPos(); // to send command 
+\begin_inset Quotes eld
+\end_inset
+
+post' and get back current position of arduino
+\end_layout
+
+\begin_layout Standard
+void processError(const QString &s); //to process errors
+\end_layout
+
+\begin_layout Standard
+void processTimeout(const QString &s); //to process timeout
+\end_layout
+
+\begin_layout Standard
+void sread(const QString &s); // to process the response of arduino and
+ perform corresponding functions
+\end_layout
+
+\begin_layout Standard
+void init(); //to send command 
+\begin_inset Quotes eld
+\end_inset
+
+init
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+void move(double x,double y); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+move
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino 
+\end_layout
+
+\begin_layout Standard
+void movx(int signDir); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+movx
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino
+\end_layout
+
+\begin_layout Standard
+void movy(int signDir); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+movy
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino
+\end_layout
+
+\begin_layout Standard
+void stop(); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+stop
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino
+\end_layout
+
+\begin_layout Standard
+void laserOn(); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+laon
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino
+\end_layout
+
+\begin_layout Standard
+void laserOff(); //to send 
+\begin_inset Quotes eld
+\end_inset
+
+loff
+\begin_inset Quotes erd
+\end_inset
+
+ command to arduino
+\end_layout
+
+\begin_layout Standard
+};
+\end_layout
+
+\begin_layout Standard
+#endif // LASERDEV_HPP
+\end_layout
+
+\begin_layout Subsection
+Calibrate.cpp/Calibrate.hpp
+\end_layout
+
+\begin_layout Standard
+The Calibrate class was taken from the GitHub Repo Arduino-Hardware-Telescope-Co
+ntrol
+\end_layout
+
+\begin_layout Standard
+Code:
+\end_layout
+
+\begin_layout Standard
+#ifndef Calibrate_h
+\end_layout
+
+\begin_layout Standard
+#define Calibrate_h
+\end_layout
+
+\begin_layout Standard
+#include <math.h>
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+brief Library for coordinates transformations.
+ Calculates the equivalent coordinates between both coordinate systems equatoria
+l and horizontal.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* It's based on Toshimi Taki's matrix method for coordinates transformation:
+ http://www.geocities.jp/toshimi_taki/matrix/matrix.htm
+\end_layout
+
+\begin_layout Standard
+* Contains the necessary methods for setting the initial time, the reference
+ objects, the transformation matrix, and to 
+\end_layout
+
+\begin_layout Standard
+* calculate the equivalent vectors between both coordinate systems.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+class Calibrate{
+\end_layout
+
+\begin_layout Standard
+private:
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Constant of multiplication for the solar and sidereal time relation.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+double _k;
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Initial timestamp for the observations.
+\end_layout
+
+\begin_layout Standard
+*/ 
+\end_layout
+
+\begin_layout Standard
+double _t0;
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Indicators for definition of the three reference objects.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+bool _isSetR1, _isSetR2, _isSetR3;
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Auxiliary matrices.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+double _lmn1[3], _LMN1[3], _lmn2[3], _LMN2[3], _lmn3[3], _LMN3[3];
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Transformation matrix.
+ Transform vectors from equatorial to horizontal system.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+double _T[3][3];
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Inverse transformation matrix.
+ Transform vectors from horizontal to equatorial system.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+double _iT[3][3];
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* If the three reference objects have been defined, it calculates the transforma
+tion matrix from them.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void _setT();
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Obtains a vector in polar notation from the equatorial coordinates and
+ the observation time.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ar Right ascension.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param dec Declination.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Timestamp of the observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *EVC Pointer to array: Returns the three dimensional vector in polar
+ notation.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void _setEVC(double ar, double dec, double t, double* EVC);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Obtains a vector in polar notation from the horizontal coordinates and
+ observation time.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ac Azimuth.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param alt Altitude.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Timestamp of the observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *HVC Pointer to array: Returns the three dimensional vector in polar
+ notation.
+\end_layout
+
+\begin_layout Standard
+*/ 
+\end_layout
+
+\begin_layout Standard
+void _setHVC(double ac, double alt, double* HVC);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Calculates the 3x3 inverse matrix.
+\end_layout
+
+\begin_layout Standard
+* 
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param m[3][3] Input matrix.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param res[3][3] Pointer to array: Returns the inverse matrix.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void _inv(double m[3][3], double res[3][3]);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Calculates the product of 3x3 matrices.
+\end_layout
+
+\begin_layout Standard
+* 
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param m1[3][3] Input matrix 1.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param m2[3][3] Input matrix 2.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param res[3][3] Pointer to array: Returns the result matrix.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void _m_prod(double m1[3][3], double m2[3][3], double res[3][3]);
+\end_layout
+
+\begin_layout Standard
+public:
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Class constructor.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+Calibrate();
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Sets the initial time.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* This parameter is used in order to consider time passing on horizontal
+ coordinates system.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t0 Unix Timestamp of the initial observation time.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void setTime(double t0);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Sets the first reference object from the coordinates in both coordinates
+ systems for 
+\end_layout
+
+\begin_layout Standard
+* that object.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ar Right Ascension (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param dec Declination (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Unix Timestamp of the Observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ac Azimuth (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param alt Altitude (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void setRef_1(double ar, double dec, double t, double ac, double alt);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Sets the second reference object from the coordinates in both coordinates
+ systems for 
+\end_layout
+
+\begin_layout Standard
+* that object.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ar Right Ascension (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param dec Declination (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Unix Timestamp of the Observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ac Azimuth (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param alt Altitude (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void setRef_2(double ar, double dec, double t, double ac, double alt);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Sets the third reference object from the coordinates in both coordinates
+ systems for 
+\end_layout
+
+\begin_layout Standard
+* that object.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ar Right Ascension (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param dec Declination (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Unix Timestamp of the Observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ac Azimuth (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param alt Altitude (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void setRef_3(double ar, double dec, double t, double ac, double alt);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Indicates if the three reference objects has been calculated.
+\end_layout
+
+\begin_layout Standard
+* 
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+return Boolean.
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+bool isConfigured();
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Horizontal coordinates calculated from the equatorial ones and time.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ar Right Ascension (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param dec Declination (equatorial coordinates)
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Unix Timestamp of the Observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *ac Pointer to double: Returns the azimuth (horizontal coordiantes).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *alt Pointer to double: Returns the altitude (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void getHCoords(double ar, double dec, double t, double *ac, double *alt);
+\end_layout
+
+\begin_layout Standard
+/**
+\end_layout
+
+\begin_layout Standard
+* Equatorial coordinates calculated from the horizontal ones and time.
+\end_layout
+
+\begin_layout Standard
+*
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param ac Azimuth (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param alt Altitude (horizontal coordinates).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param t Unix Timestamp of the Observation.
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *ar Pointer to double: Returns the right ascension (equatorial coordinates
+).
+\end_layout
+
+\begin_layout Standard
+* 
+\backslash
+param *dec Pointer to double: Returns the declination (equatorial coordinates).
+\end_layout
+
+\begin_layout Standard
+*/
+\end_layout
+
+\begin_layout Standard
+void getECoords(double ac, double alt, double t, double *ar, double *dec);
+\end_layout
+
+\begin_layout Standard
+};
+\end_layout
+
+\begin_layout Standard
+#endif
+\end_layout
+
+\end_body
+\end_document

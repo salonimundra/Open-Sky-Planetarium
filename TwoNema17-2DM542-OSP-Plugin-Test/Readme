@@ -1,0 +1,16 @@
+This code is used to test OSP plugin with NEMA17 motors and 2DM542 microstep driver. 
+
+The connections for one motor are as under:
+1. The pins A+ A- B+ and B- are connected with the four pins of NEMA17.
+2. V+ and GND are connected to 24V power supply terminals. GND is shorted with the GND of Arduino. 
+3. ENA- DIR- and PLS- are connected to GND of Arduino.
+4. PLS+ --> D10 of Arduino.
+5. DIR+ --> D11 of Arduino.
+6. ENA+ --> D12 of Arduino. 
+7. RS232 pins were completely OFF.
+8. The swicthes on the drivers were adjusted for 3200 steps per revolution and 1A current supply.
+
+Both the drivers were powered by a single 24V DC supply. 
+
+
+

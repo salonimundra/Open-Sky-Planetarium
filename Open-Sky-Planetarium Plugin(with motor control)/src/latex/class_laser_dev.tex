@@ -1,0 +1,260 @@
+\hypertarget{class_laser_dev}{\section{Laser\-Dev Class Reference}
+\label{class_laser_dev}\index{Laser\-Dev@{Laser\-Dev}}
+}
+
+
+This class is used for funtions related to motion and turning the laser on and off.  
+
+
+
+
+{\ttfamily \#include $<$Laser\-Dev.\-hpp$>$}
+
+Inheritance diagram for Laser\-Dev\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_laser_dev}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_laser_dev_acafc5e4275cf1fab74218af7af7f34e5}{get\-Pos} ()
+\item 
+void \hyperlink{class_laser_dev_a337541ffca93b0c2900778a91554ede6}{process\-Error} (const Q\-String \&s)
+\item 
+void \hyperlink{class_laser_dev_ab016d27d125aa27c856b281e2f9e5370}{process\-Timeout} (const Q\-String \&s)
+\item 
+void \hyperlink{class_laser_dev_a527679c655073b74703b7399a1adbe8d}{sread} (const Q\-String \&s)
+\item 
+void \hyperlink{class_laser_dev_aedb2ff8257a72247202b5434780a1655}{init} ()
+\item 
+void \hyperlink{class_laser_dev_ae66064fa79825cfdc8fb604db0d462af}{move} (double x, double y)
+\item 
+void \hyperlink{class_laser_dev_a2e229a59571fa9dcd93ebc6a23ecb3c1}{movx} (int sign\-Dir)
+\item 
+void \hyperlink{class_laser_dev_a6d9a60d963031c9104200014a380b55e}{movy} (int sign\-Dir)
+\item 
+void \hyperlink{class_laser_dev_a06c0022d17589088dfc7a0dcc56141ed}{stop} ()
+\item 
+void \hyperlink{class_laser_dev_aee2527432d2b36107c42f3307c8f8c47}{laser\-On} ()
+\item 
+void \hyperlink{class_laser_dev_a19059c3f944c0c0dae17485676fea678}{laser\-Off} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_laser_dev_a5f64ad8bfee8c6a870d5b6cf8c22ad85}{debug\-\_\-send} (Q\-String s)
+\item 
+void \hyperlink{class_laser_dev_a6e1ab7df7165fdf0a2df02a1a2e459ae}{pos\-\_\-received} (Q\-String, Q\-String)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_laser_dev_a9d9aa26eac4043fd9674856745b228ea}{Laser\-Dev} (Q\-Object $\ast$parent=0)
+\item 
+\hyperlink{class_laser_dev_a8b57b80183af8eaa9611a9b6cae3d635}{$\sim$\-Laser\-Dev} ()
+\item 
+void \hyperlink{class_laser_dev_af33d1e8b41f8f14b451f59cf2d491512}{set\-Port\-Name} (const Q\-String \&s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used for funtions related to motion and turning the laser on and off. 
+
+Definition at line 32 of file Laser\-Dev.\-hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_laser_dev_a9d9aa26eac4043fd9674856745b228ea}{\index{Laser\-Dev@{Laser\-Dev}!Laser\-Dev@{Laser\-Dev}}
+\index{Laser\-Dev@{Laser\-Dev}!LaserDev@{Laser\-Dev}}
+\subsubsection[{Laser\-Dev}]{\setlength{\rightskip}{0pt plus 5cm}Laser\-Dev\-::\-Laser\-Dev (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_laser_dev_a9d9aa26eac4043fd9674856745b228ea}
+Class constructor. 
+
+Definition at line 35 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a8b57b80183af8eaa9611a9b6cae3d635}{\index{Laser\-Dev@{Laser\-Dev}!$\sim$\-Laser\-Dev@{$\sim$\-Laser\-Dev}}
+\index{$\sim$\-Laser\-Dev@{$\sim$\-Laser\-Dev}!LaserDev@{Laser\-Dev}}
+\subsubsection[{$\sim$\-Laser\-Dev}]{\setlength{\rightskip}{0pt plus 5cm}Laser\-Dev\-::$\sim$\-Laser\-Dev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_laser_dev_a8b57b80183af8eaa9611a9b6cae3d635}
+Class destructor. 
+
+Definition at line 48 of file Laser\-Dev.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_laser_dev_a5f64ad8bfee8c6a870d5b6cf8c22ad85}{\index{Laser\-Dev@{Laser\-Dev}!debug\-\_\-send@{debug\-\_\-send}}
+\index{debug\-\_\-send@{debug\-\_\-send}!LaserDev@{Laser\-Dev}}
+\subsubsection[{debug\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::debug\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_laser_dev_a5f64ad8bfee8c6a870d5b6cf8c22ad85}
+Sending the debug signal \hypertarget{class_laser_dev_acafc5e4275cf1fab74218af7af7f34e5}{\index{Laser\-Dev@{Laser\-Dev}!get\-Pos@{get\-Pos}}
+\index{get\-Pos@{get\-Pos}!LaserDev@{Laser\-Dev}}
+\subsubsection[{get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::get\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_acafc5e4275cf1fab74218af7af7f34e5}
+This function is called to get the current position of the telescope in radians 
+
+Definition at line 151 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_aedb2ff8257a72247202b5434780a1655}{\index{Laser\-Dev@{Laser\-Dev}!init@{init}}
+\index{init@{init}!LaserDev@{Laser\-Dev}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_aedb2ff8257a72247202b5434780a1655}
+sends the \char`\"{}init\char`\"{} command to the device and after \char`\"{}done\-\_\-init\char`\"{} is received from the device, emits \char`\"{}init\-\_\-received\char`\"{} signal 
+
+Definition at line 141 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a19059c3f944c0c0dae17485676fea678}{\index{Laser\-Dev@{Laser\-Dev}!laser\-Off@{laser\-Off}}
+\index{laser\-Off@{laser\-Off}!LaserDev@{Laser\-Dev}}
+\subsubsection[{laser\-Off}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::laser\-Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a19059c3f944c0c0dae17485676fea678}
+To turn the laser off 
+
+Definition at line 222 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_aee2527432d2b36107c42f3307c8f8c47}{\index{Laser\-Dev@{Laser\-Dev}!laser\-On@{laser\-On}}
+\index{laser\-On@{laser\-On}!LaserDev@{Laser\-Dev}}
+\subsubsection[{laser\-On}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::laser\-On (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_aee2527432d2b36107c42f3307c8f8c47}
+to turn the laser on 
+
+Definition at line 212 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_ae66064fa79825cfdc8fb604db0d462af}{\index{Laser\-Dev@{Laser\-Dev}!move@{move}}
+\index{move@{move}!LaserDev@{Laser\-Dev}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::move (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_ae66064fa79825cfdc8fb604db0d462af}
+Sends the telescope coordinates to the device 
+\begin{DoxyParams}{Parameters}
+{\em x} & Azimuth fed to arduino. \\
+\hline
+{\em y} & Altitude fed to arduino. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 162 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a2e229a59571fa9dcd93ebc6a23ecb3c1}{\index{Laser\-Dev@{Laser\-Dev}!movx@{movx}}
+\index{movx@{movx}!LaserDev@{Laser\-Dev}}
+\subsubsection[{movx}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::movx (
+\begin{DoxyParamCaption}
+\item[{int}]{sign\-Dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a2e229a59571fa9dcd93ebc6a23ecb3c1}
+To move the laser in x direction depending on sign\-Dir 
+
+Definition at line 191 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a6d9a60d963031c9104200014a380b55e}{\index{Laser\-Dev@{Laser\-Dev}!movy@{movy}}
+\index{movy@{movy}!LaserDev@{Laser\-Dev}}
+\subsubsection[{movy}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::movy (
+\begin{DoxyParamCaption}
+\item[{int}]{sign\-Dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a6d9a60d963031c9104200014a380b55e}
+To move the laser in y direction depending on sign\-Dir /param sign\-Dir 0 to move up 1 to move down 
+
+Definition at line 178 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a6e1ab7df7165fdf0a2df02a1a2e459ae}{\index{Laser\-Dev@{Laser\-Dev}!pos\-\_\-received@{pos\-\_\-received}}
+\index{pos\-\_\-received@{pos\-\_\-received}!LaserDev@{Laser\-Dev}}
+\subsubsection[{pos\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::pos\-\_\-received (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{, }
+\item[{Q\-String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_laser_dev_a6e1ab7df7165fdf0a2df02a1a2e459ae}
+Recieving the position from arduino \hypertarget{class_laser_dev_a337541ffca93b0c2900778a91554ede6}{\index{Laser\-Dev@{Laser\-Dev}!process\-Error@{process\-Error}}
+\index{process\-Error@{process\-Error}!LaserDev@{Laser\-Dev}}
+\subsubsection[{process\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::process\-Error (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a337541ffca93b0c2900778a91554ede6}
+slot for the error, sends the signal to \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} 
+
+Definition at line 56 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_ab016d27d125aa27c856b281e2f9e5370}{\index{Laser\-Dev@{Laser\-Dev}!process\-Timeout@{process\-Timeout}}
+\index{process\-Timeout@{process\-Timeout}!LaserDev@{Laser\-Dev}}
+\subsubsection[{process\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::process\-Timeout (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_ab016d27d125aa27c856b281e2f9e5370}
+slot for the timeout , sends the signal to \hyperlink{class_o_s_p_main_dialog}{O\-S\-P\-Main\-Dialog} 
+
+Definition at line 63 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_af33d1e8b41f8f14b451f59cf2d491512}{\index{Laser\-Dev@{Laser\-Dev}!set\-Port\-Name@{set\-Port\-Name}}
+\index{set\-Port\-Name@{set\-Port\-Name}!LaserDev@{Laser\-Dev}}
+\subsubsection[{set\-Port\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::set\-Port\-Name (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_laser_dev_af33d1e8b41f8f14b451f59cf2d491512}
+function for setting the port\-Name 
+\begin{DoxyParams}{Parameters}
+{\em s} & port name \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a527679c655073b74703b7399a1adbe8d}{\index{Laser\-Dev@{Laser\-Dev}!sread@{sread}}
+\index{sread@{sread}!LaserDev@{Laser\-Dev}}
+\subsubsection[{sread}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::sread (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a527679c655073b74703b7399a1adbe8d}
+This function is called after writing to the serial port. This function performs various steps like echo\-Data, get\-Steps, get\-Horizontal\-Coords, get\-Vertical\-Coords 
+
+Definition at line 81 of file Laser\-Dev.\-cpp.
+
+\hypertarget{class_laser_dev_a06c0022d17589088dfc7a0dcc56141ed}{\index{Laser\-Dev@{Laser\-Dev}!stop@{stop}}
+\index{stop@{stop}!LaserDev@{Laser\-Dev}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Laser\-Dev\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_laser_dev_a06c0022d17589088dfc7a0dcc56141ed}
+to stop the laser movements in either of the direction x or y /param sign\-Dir 0 to move up 1 to move down 
+
+Definition at line 203 of file Laser\-Dev.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_laser_dev_8hpp}{Laser\-Dev.\-hpp}\item 
+\hyperlink{_laser_dev_8cpp}{Laser\-Dev.\-cpp}\end{DoxyCompactItemize}

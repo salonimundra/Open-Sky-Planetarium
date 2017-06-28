@@ -1,0 +1,188 @@
+.TH "Calibrate" 3 "Mon Jan 30 2017" "OpenSky Planetarium" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Calibrate \- 
+.PP
+Library for coordinates transformations\&. Calculates the equivalent coordinates between both coordinate systems equatorial and horizontal\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Calibrate\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCalibrate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTime\fP (double t0)"
+.br
+.ti -1c
+.RI "void \fBsetRef_1\fP (double ar, double dec, double t, double ac, double alt)"
+.br
+.ti -1c
+.RI "void \fBsetRef_2\fP (double ar, double dec, double t, double ac, double alt)"
+.br
+.ti -1c
+.RI "void \fBsetRef_3\fP (double ar, double dec, double t, double ac, double alt)"
+.br
+.ti -1c
+.RI "void \fBautoRef_3\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisConfigured\fP ()"
+.br
+.ti -1c
+.RI "void \fBgetHCoords\fP (double ar, double dec, double t, double *ac, double *alt)"
+.br
+.ti -1c
+.RI "void \fBgetECoords\fP (double ac, double alt, double t, double *ar, double *dec)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Library for coordinates transformations\&. Calculates the equivalent coordinates between both coordinate systems equatorial and horizontal\&. 
+
+It's based on Toshimi Taki's matrix method for coordinates transformation: http://www.geocities.jp/toshimi_taki/matrix/matrix.htm Contains the necessary methods for setting the initial time, the reference objects, the transformation matrix, and to calculate the equivalent vectors between both coordinate systems\&. 
+.PP
+Definition at line 36 of file Calibrate\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Calibrate::Calibrate ()"
+Class constructor\&. 
+.PP
+Definition at line 48 of file Calibrate\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Calibrate::autoRef_3 ()"
+Third reference object calculated from the two others ones\&.
+.PP
+Calculates the cross product of the two first reference objects in both coordinates systems, in order to obtain the third one\&. These two first objects must have 90º from each other, approximately (from 60º to 120º is enough to obtain goods results)\&. 
+.PP
+Definition at line 175 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::getECoords (doubleac, doublealt, doublet, double *ar, double *dec)"
+Equatorial coordinates calculated from the horizontal ones and time\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIac\fP Azimuth (horizontal coordinates)\&. 
+.br
+\fIalt\fP Altitude (horizontal coordinates)\&. 
+.br
+\fIt\fP Unix Timestamp of the Observation\&. 
+.br
+\fI*ar\fP Pointer to double: Returns the right ascension (equatorial coordinates)\&. 
+.br
+\fI*dec\fP Pointer to double: Returns the declination (equatorial coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 260 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::getHCoords (doublear, doubledec, doublet, double *ac, double *alt)"
+Horizontal coordinates calculated from the equatorial ones and time\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIar\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates) 
+.br
+\fIt\fP Unix Timestamp of the Observation\&. 
+.br
+\fI*ac\fP Pointer to double: Returns the azimuth (horizontal coordiantes)\&. 
+.br
+\fI*alt\fP Pointer to double: Returns the altitude (horizontal coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 231 of file Calibrate\&.cpp\&.
+.SS "bool Calibrate::isConfigured ()"
+Indicates if the three reference objects has been calculated\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Boolean\&. 
+.RE
+.PP
+
+.PP
+Definition at line 167 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::setRef_1 (doublear, doubledec, doublet, doubleac, doublealt)"
+Sets the first reference object from the coordinates in both coordinates systems for that object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIar\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates)\&. 
+.br
+\fIt\fP Unix Timestamp of the Observation\&. 
+.br
+\fIac\fP Azimuth (horizontal coordinates)\&. 
+.br
+\fIalt\fP Altitude (horizontal coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 127 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::setRef_2 (doublear, doubledec, doublet, doubleac, doublealt)"
+Sets the second reference object from the coordinates in both coordinates systems for that object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIar\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates)\&. 
+.br
+\fIt\fP Unix Timestamp of the Observation\&. 
+.br
+\fIac\fP Azimuth (horizontal coordinates)\&. 
+.br
+\fIalt\fP Altitude (horizontal coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 141 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::setRef_3 (doublear, doubledec, doublet, doubleac, doublealt)"
+Sets the third reference object from the coordinates in both coordinates systems for that object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIar\fP Right Ascension (equatorial coordinates)\&. 
+.br
+\fIdec\fP Declination (equatorial coordinates)\&. 
+.br
+\fIt\fP Unix Timestamp of the Observation\&. 
+.br
+\fIac\fP Azimuth (horizontal coordinates)\&. 
+.br
+\fIalt\fP Altitude (horizontal coordinates)\&. 
+.RE
+.PP
+
+.PP
+Definition at line 155 of file Calibrate\&.cpp\&.
+.SS "void Calibrate::setTime (doublet0)"
+Sets the initial time\&.
+.PP
+This parameter is used in order to consider time passing on horizontal coordinates system\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIt0\fP Unix Timestamp of the initial observation time\&. 
+.RE
+.PP
+
+.PP
+Definition at line 119 of file Calibrate\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for OpenSky Planetarium from the source code\&.
