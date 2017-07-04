@@ -73,6 +73,11 @@ void LaserDev :: setPortName(const QString &s){
 	thread.sendRequest(osp_serialPort,5000,QString(""));
 }
 
+void LaserDev :: releasePort(){
+    thread.serial.close();
+    qDebug()<<"Releasing Port";
+}
+
 /*
 sread(const QString):
 	this function is called after writing to the serial port
@@ -120,6 +125,10 @@ void LaserDev::sread(const QString &s){
                emit debug_send(recvd);
             getPos();
            }
+    else if(recvd.compare("done_close")==0){
+           emit debug_send(recvd);
+        releasePort();
+       }
         else if(recvd.compare("done_lase")==0){
                emit debug_send("intensity");
                comm=intense;
@@ -162,6 +171,17 @@ init():
 void LaserDev :: init(){
 	comm=QString("init");
 	thread.sendRequest(osp_serialPort,5000,QString(comm));
+}
+
+/*
+closeWindow():
+    sends the "clos" command to the device to reset the hardware
+
+*/
+void LaserDev :: closeWindow(){
+
+    comm=QString("clos");
+    thread.sendRequest(osp_serialPort,5000,QString(comm));
 }
 
 

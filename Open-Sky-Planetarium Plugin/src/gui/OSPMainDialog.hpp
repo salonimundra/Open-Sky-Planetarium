@@ -114,18 +114,25 @@ public slots:
 
 	/**
 	*	This function sets three references for the matrix transformation basically it sends three references for matrix transformation to the device for its calculations  
-        */
+    */
+    void setReference();
 
-        void setIntensity(int x);
-          /**
-          *    This function is connected to the laser intensity control slider
-          */
+    /**
+    *    This function is connected to the laser intensity control slider
+    */
+    void setIntensity(int x);
 
-        void adjToggled();
+    /**
+    *    This function is connected to the close button of gui
+    */
+    void closeWin();
 
-	void setReference();
+    /**
+    *	This function is connected to the motor control radioButtons of the gui
+    */
+    void adjToggled();
 
-	/**
+    /**
 	*	This function sends the coordinates from stellarium to device so that the laser could point the star. This function is enabled only after calibration is performed
 	*/	
 	void goTo();

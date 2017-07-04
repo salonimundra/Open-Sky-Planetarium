@@ -77,6 +77,8 @@ OSPMainDialog::OSPMainDialog()
 
 OSPMainDialog::~OSPMainDialog()
 {
+    //qDebug()<<"Closing Window"<<endl;
+    //device.closeWindow();
 	delete ui;
 
 }
@@ -96,7 +98,7 @@ void OSPMainDialog::createDialogContent()
 	ui->tabWidg->setCurrentIndex(2);
 	setSignals();
 	connect(&StelApp::getInstance(), SIGNAL(languageChanged()), this, SLOT(retranslate()));
-	connect(ui->closeStelWindow, SIGNAL(clicked()), this, SLOT(close()));
+    connect(ui->closeStelWindow, SIGNAL(clicked()), this, SLOT(closeWin()));
 }
 
 /*
@@ -300,6 +302,11 @@ void OSPMainDialog :: rightPressed(){
 void OSPMainDialog :: leftPressed(){
 		device.movx(0);
 }
+/*
+ reset():
+ this function is called when the reset button is clicked.
+ this function calls move(0,0) and takes the laser to the initial coordinates.
+ */
 
 void OSPMainDialog ::reset(){
     //this->initDevice();
@@ -322,16 +329,30 @@ void OSPMainDialog :: laserToggled(){
 		}
 		else{
                     ui->intensity->setEnabled(false);
-                    ui->intensity->setSliderPosition(50);
+                   // ui->intensity->setSliderPosition(50);
                     device.laserOff();
                         qDebug() << "[OpenSkyPlanetarium]:Turning LASER off" << endl;
 		}	
 }
 
+/*
+closeWin():
+    this slot is connected to the close button of the gui
+*/
+void OSPMainDialog :: closeWin(){
+    debug_received("closing window");
+    device.closeWindow();
+    close();
+
+}
+
 
 ///////////////////////////////////Calibration Related SLots/////////////////////////////////////////////////////////////////////////
 
-
+/*
+ setIntensity():
+    this function is connected to the laser intensity control slider of the gui
+*/
 void OSPMainDialog :: setIntensity(int x){
     int l=ui->intensity->value();
     device.setIntensity(l);

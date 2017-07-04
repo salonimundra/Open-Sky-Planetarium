@@ -75,7 +75,7 @@ void SerialCom::run()
     int myWaitTimeout = waitTime;
     QString myRequest = request;
     //mutex.unlock();
-    QSerialPort serial;
+    //QSerialPort serial;
 
     while (!quit) {
         if (myPortNameChanged) {

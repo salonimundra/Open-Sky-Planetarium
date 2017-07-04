@@ -48,6 +48,7 @@ public:
 	*	\param s port name
 	*/
     void setPortName(const QString &s);
+    void releasePort();
 signals:
 
 	/**
@@ -135,6 +136,11 @@ public slots:
 	*	sends the "init" command to the device and after "done_init" is received from the device, emits "init_received" signal
 	*/
 	void init();
+
+    /**
+    *	sends the "clos" command to the device to reset the hardware
+    */
+    void closeWindow();
 
 	/**
 	*	Sends the telescope coordinates to the device

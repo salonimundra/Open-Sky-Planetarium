@@ -49,7 +49,7 @@ StelPluginInfo OpenSkyPlanetariumPluginInterface::getPluginInfo() const
 	info.id = "OpenSkyPlanetarium";
 	info.displayedName = N_("OpenSkyPlanetarium");
 	info.authors = "IIT Bombay Interns";
-	info.contact = "redcoder265@gmail.com";
+    info.contact = "openskyplanetarium@fossee.in";
 	info.description = N_("An open source initiative for Planetarium shows in Open Sky");
 	return info;
 }
@@ -122,6 +122,7 @@ Deinit our Module
 *************************************************************************/
 void OpenSkyPlanetarium::deinit()
 {
+    //qDebug()<<"In OSP mainindow"<<endl;
     delete mainDialog;
 }
 

@@ -21,6 +21,7 @@
 #include <QThread>
 #include <QMutex>
 #include <QWaitCondition>
+#include <QtSerialPort/QSerialPort>
 
 //! This class is used for funtions related to serial communication with the arduino
 class SerialCom : public QThread
@@ -36,6 +37,7 @@ private:
     bool quit;
 
 public:
+	QSerialPort serial;
 	/**
 	*	Class constructor
 	*/

@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-8f17d2f65a644082d774b1d5f515f2a3 src/CMakeFiles/OpenSkyPlanetarium-static_automoc
-b1d4d39c73824c7d3278b3d83223cdad src/qrc_OpenSkyPlanetarium.cpp
-a76dd015ae303fe2a5a8cf3696cfc41b src/ui_OSPMainDialog.h
