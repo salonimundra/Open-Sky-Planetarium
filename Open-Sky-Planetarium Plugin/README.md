@@ -1,34 +1,33 @@
-OpenSkyPlanetarium plugin for Stellarium
-=====================================
+# Open Sky Planetarium plugin for Stellarium
+
 
 Plugin for controlling the Arduino-Based Laser and Stellarium to create Planetarium shows.
 
 
-BUILDING THE PLUGIN
-===================
+## BUILDING THE PLUGIN
 
 Please note, these instructions are only directly applicable to Linux.
 Windows and OSX targets will probably require modification of the
 CMakeLists.txt file.
 
-0.  Install and build the SVN version of Stellarium as per the 
+1.  Install and build the SVN version of Stellarium as per the 
 instructions on the Stellarium wiki:
 
   http://stellarium.org/wiki/index.php/Compilation_on_Linux
 
-1.  Set the environment variable STELROOT to the root of the Stellarium
+2.  Set the environment variable STELROOT to the root of the Stellarium
 source tree.  The Stellarium build directory is expected to be:
 
   $STELROOT/builds/unix 
 
-2.  Create a sub-directory builds/unix in your plugin folder and change into that directory.
+3.  Change into the builds/unix directory in your plugin folder.
 
-3.  Run:
-
+4.  Run:
+```
   cmake ../.. 
   make
   make install
-
+```
 If all goes well, the relevant files should be built and copied to your 
 ~/.stellarium/modules directory.
 
